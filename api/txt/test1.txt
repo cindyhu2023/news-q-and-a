@@ -1,0 +1,74 @@
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Question: 
+What happened during the shooting incident outside a southern Los Angeles grocery store that left six people injured?
+Answer: 
+At around 4 pm on Friday, an argument broke out between suspects and someone in the Superior Grocers outlet store[1]. The suspects left the store and fired back into it with handguns, injuring six people[1], including five bystanders[1]. No information is available on who was responsible[1].
+Reference: 
+{1: 'https://www.cnn.com/2021/12/31/us/southern-los-angeles-grocery-store-shooting/index.html', 2: 'https://www.cnn.com/2022/02/08/us/washington-richland-fred-meyer-shooting-tuesday/index.html', 3: 'https://www.cnn.com/2022/02/08/us/washington-richland-fred-meyer-shooting-tuesday/index.html'}
+=====================================
+Question: 
+Why were three Pennsylvania officers charged with manslaughter in the fatal shooting of an 8-year-old?
+Answer: 
+The three Sharon Hill, Pennsylvania, police officers were charged with one count of voluntary manslaughter, one count of involuntary manslaughter and 10 counts of reckless endangerment for their role in the shooting death of 8-year-old Fanta Bility [1]. Delaware County District Attorney Jack Stollsteimer stated that manslaughter charges were appropriate in this case rather than murder in the third degree due to a lack of evidence of malice [1].
+Reference: 
+{1: 'https://www.cnn.com/2022/01/18/us/pennsylvania-officers-charged-manslaughter-fanta-bility-shooting/index.html', 2: 'https://www.cnn.com/2022/01/21/us/pennsylvania-officers-fired-fanta-bility-shooting/index.html', 3: 'https://www.cnn.com/2022/02/24/us/ethan-crumbley-parents-michigan-shooting/index.html'}
+=====================================
+Question: 
+How is the reform-minded Los Angeles County DA, George Gascón, being threatened by package thefts and other high-profile crimes?
+Answer: 
+The 100+ arrests made in the package theft cases have not been followed up with court proceedings due to Gascón's December 2020 mandate not to prosecute many nonviolent misdemeanors, such as trespassing [1]. Gascón is also facing pushback from the union representing LA's deputy district attorneys, who have sued him over his reform-minded policies [2]. Meantime, homicide rates have risen in LA County since Gascón took office, leading to criticism of him for recent
+Reference: 
+{1: 'https://www.cnn.com/2022/01/25/us/george-gascon-package-thefts-los-angeles-county/index.html', 2: 'https://www.cnn.com/2022/01/25/us/george-gascon-package-thefts-los-angeles-county/index.html', 3: 'https://www.cnn.com/2022/01/25/us/george-gascon-package-thefts-los-angeles-county/index.html'}
+=====================================
+Question: 
+What happened during the head-on crash that killed nine people and involved the University of the Southwest golf teams?
+Answer: 
+The pickup truck, driven by a 13-year-old, veered into the van carrying the University of the Southwest golf teams for unknown reasons, leading to a head-on collision. Both vehicles caught fire and burned, resulting in nine fatalities [1,3].
+Reference: 
+{1: 'https://www.cnn.com/2022/03/16/us/usw-golf-team-bus-crash/index.html', 2: 'https://www.cnn.com/2022/03/17/us/usw-golf-team-van-crash-thursday/index.html', 3: 'https://www.cnn.com/2022/03/17/us/usw-golf-team-van-crash-thursday/index.html'}
+=====================================
+Question: 
+How did Border Patrol rescue migrants in the Rio Grande?
+Answer: 
+Border Patrol agents assigned to the Del Rio Sector's Eagle Pass Station observed a family unit crossing the Rio Grande and, as they neared the US riverbank, the ground collapsed and they plunged into deep water [1]. One agent jumped in the water to pull the 34-year-old mother and 5-year-old child to safety, and then entered the river again to rescue the 33-year-old man [1]. After the family was pulled from the water to safety, they were
+Reference: 
+{1: 'https://www.cnn.com/2022/02/13/us/border-control-rio-grande-rescue/index.html', 2: 'https://www.cnn.com/2022/02/07/us/texas-national-guard-member-dies/index.html', 3: 'https://www.cnn.com/2022/02/19/us/robot-dogs-us-mexico-border-patrol-cec/index.html'}
+=====================================
+Question: 
+What is the significance of Punxsutawney Phil seeing his shadow and what does it mean for winter?
+Answer: 
+Punxsutawney Phil saw his shadow on Groundhog Day 2021, meaning six more weeks of winter according to legend [1]. However, according to the National Centers for Environmental Information, Phil was only 50% correct in his prediction, as the US experienced below average temperatures in February and above average in March [2]. Phil's track record is not perfect, being accurate only 40% of the time in the past 10 years [3].
+Reference: 
+{1: 'https://www.cnn.com/2022/02/02/us/groundhog-day-punxsutawney-phil-trnd/index.html', 2: 'https://www.cnn.com/2022/01/01/us/white-people-overcoming-racist-backgrounds-blake-cec/index.html', 3: 'https://www.cnn.com/2022/01/23/us/secure-community-network-jewish-security/index.html'}
+=====================================
+Question: 
+Why was a bridge given an overall 'poor' rating by the Pennsylvania Department of Transportation?
+Answer: 
+According to the PennDOT website [1], Bridge condition is determined by the lowest condition rating of the primary components of a bridge or culvert. The bridge that collapsed in Pittsburgh had a Deck Condition of "4 - Poor," a Superstructure Condition of "4 - Poor," and a Substructure Condition of "6 - Satisfactory" [1], resulting in an overall 'poor' rating.
+Reference: 
+{1: 'https://www.cnn.com/2022/01/28/us/pittsburgh-bridge-collapse-poor-rating/index.html', 2: 'https://www.cnn.com/2022/01/29/us/pittsburgh-bridge-collapse-investigation/index.html', 3: 'https://www.cnn.com/2022/01/29/us/pittsburgh-bridge-collapse-investigation/index.html'}
+=====================================
+Question: 
+Why was an Oklahoma death row inmate who requested a firing squad executed by lethal injection?
+Answer: 
+The Oklahoma death row inmate was executed by lethal injection because the federal judge denied the preliminary injunction to intervene and allow the execution by firing squad (Document [1]). Justice Brett Kavanaugh also denied the application for a stay of execution (Document [1]). The Oklahoma Pardon and Parole Board also voted 4-1 against recommending clemency (Document [1]). Answering is not possible given the available information from Documents [2] and [3].
+Reference: 
+{1: 'https://www.cnn.com/2022/01/27/us/oklahoma-donald-grant-execution/index.html', 2: 'https://www.cnn.com/2022/02/16/us/merchant-marine-academy-usmma-sexual-assault-rape-invs/index.html', 3: 'https://www.cnn.com/2022/01/06/us/dzhokhar-tsarnaev-boston-bomber-covid-stimulus/index.html'}
+=====================================
+Question: 
+What is the Milwaukee Police's belief about the multiple suspects in the fatal shooting of six people?
+Answer: 
+The Milwaukee Police Chief Jeffrey Norman said that investigators believe there are multiple suspects in the shooting and four persons of interest are in custody. [1] He said the incident was likely a targeted attack and the public is not in danger. [1] The motive is not clear. [1]
+Reference: 
+{1: 'https://www.cnn.com/2022/01/27/us/milwaukee-mass-shooting-multiple-suspects/index.html', 2: 'https://www.cnn.com/2021/12/31/us/southern-los-angeles-grocery-store-shooting/index.html', 3: 'https://www.cnn.com/2022/03/08/us/des-moines-iowa-school-shooting-tuesday/index.html'}
+=====================================
+Question: 
+What happened to the 13-year-old boy who died after presumed fentanyl exposure at his Hartford, CT school, and what are the implications of this incident?
+Answer: 
+The 13-year-old boy died after ingesting fentanyl at his school in Hartford, Connecticut, according to police and Mayor Luke Bronin [1]. The incident has raised questions of how the child had access to such a deadly drug and has led to a police investigation to hold adults accountable [1]. The students and faculty had to have their shoes decontaminated to ensure trace amounts of the drug were not carried out of the school [2].
+Reference: 
+{1: 'https://www.cnn.com/2022/01/16/us/hartford-connecticut-teenager-death-fentanyl-overdose/index.html', 2: 'https://www.cnn.com/2022/01/14/us/connecticut-school-fentanyl-exposure/index.html', 3: 'https://www.cnn.com/2022/03/07/us/des-moines-iowa-school-shooting/index.html'}
+=====================================

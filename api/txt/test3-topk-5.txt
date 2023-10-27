@@ -1,0 +1,74 @@
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+Question: 
+What happened during the shooting incident outside a southern Los Angeles grocery store that left six people injured?
+Answer: 
+The shooting incident outside the Southern Los Angeles grocery store on Friday left six people injured. According to Los Angeles Police Department Captain Stacy Spell [1], the suspects and someone at the grocery store got into an argument inside and the suspects left the store and fired back into it with handguns. All six people were taken to local hospitals with non-life threatening injuries [1]. Answering is not possible given the available information.
+Reference: 
+{1: 'https://www.cnn.com/2021/12/31/us/southern-los-angeles-grocery-store-shooting/index.html', 2: 'https://www.cnn.com/2022/02/08/us/washington-richland-fred-meyer-shooting-tuesday/index.html', 3: 'https://www.cnn.com/2022/02/08/us/washington-richland-fred-meyer-shooting-tuesday/index.html', 4: 'https://www.cnn.com/2022/01/25/us/atlanta-child-shootings/index.html', 5: 'https://www.cnn.com/2022/01/30/us/child-custody-battles-covid-cec/index.html'}
+=====================================
+Question: 
+Why were three Pennsylvania officers charged with manslaughter in the fatal shooting of an 8-year-old?
+Answer: 
+Three Sharon Hill, Pennsylvania police officers were charged with one count of voluntary manslaughter, one count of involuntary manslaughter and 10 counts of reckless endangerment in connection with the shooting death of 8-year-old Fanta Bility while she exited a high school football game on August 27 [1]. The Delaware County District Attorney's Office determined that manslaughter charges were "appropriate" rather than murder in the third degree because there was no evidence of malice [1].
+Reference: 
+{1: 'https://www.cnn.com/2022/01/18/us/pennsylvania-officers-charged-manslaughter-fanta-bility-shooting/index.html', 2: 'https://www.cnn.com/2022/01/21/us/pennsylvania-officers-fired-fanta-bility-shooting/index.html', 3: 'https://www.cnn.com/2022/02/24/us/ethan-crumbley-parents-michigan-shooting/index.html', 4: 'https://www.cnn.com/2022/03/08/us/des-moines-iowa-school-shooting-tuesday/index.html', 5: 'https://www.cnn.com/2022/01/25/us/atlanta-child-shootings/index.html'}
+=====================================
+Question: 
+How is the reform-minded Los Angeles County DA, George Gascón, being threatened by package thefts and other high-profile crimes?
+Answer: 
+Union Pacific has blamed the package thefts on Los Angeles County District Attorney George Gascón, who has implemented a "more humane" criminal justice system, including orders to not prosecute many misdemeanors like trespassing [1]. Gascón has faced fierce pushback from within his own ranks and the community he serves, and has been blamed for a spate of smash-and-grab robberies before Christmas [4]. Gascón disputes the claim he is to blame, saying none of the cases
+Reference: 
+{1: 'https://www.cnn.com/2022/01/25/us/george-gascon-package-thefts-los-angeles-county/index.html', 2: 'https://www.cnn.com/2022/01/25/us/george-gascon-package-thefts-los-angeles-county/index.html', 3: 'https://www.cnn.com/2022/01/25/us/george-gascon-package-thefts-los-angeles-county/index.html', 4: 'https://www.cnn.com/2022/01/25/us/george-gascon-package-thefts-los-angeles-county/index.html', 5: 'https://www.cnn.com/2022/01/25/us/george-gascon-package-thefts-los-angeles-county/index.html'}
+=====================================
+Question: 
+What happened during the head-on crash that killed nine people and involved the University of the Southwest golf teams?
+Answer: 
+The crash happened when a Dodge 2500 pickup drove into the northbound lane and struck a Ford Transit passenger van registered to the University of the Southwest head-on [1]. Nine people, including six student athletes and their coach, were killed in the crash [1]. Preliminary information indicates the left front tire of the pickup was a spare that failed, causing the vehicle to pull hard to the left into oncoming traffic of a two-lane roadway [3].
+Reference: 
+{1: 'https://www.cnn.com/2022/03/16/us/usw-golf-team-bus-crash/index.html', 2: 'https://www.cnn.com/2022/03/17/us/usw-golf-team-van-crash-thursday/index.html', 3: 'https://www.cnn.com/2022/03/17/us/usw-golf-team-van-crash-thursday/index.html', 4: 'https://www.cnn.com/2022/03/16/us/usw-golf-team-bus-crash/index.html', 5: 'https://www.cnn.com/2022/03/17/us/usw-golf-team-van-crash-thursday/index.html'}
+=====================================
+Question: 
+How did Border Patrol rescue migrants in the Rio Grande?
+Answer: 
+Border Patrol agents assigned to the Del Rio Sector's Eagle Pass Station were conducting routine watches early Saturday morning when they "observed what appeared to be a family unit, crossing the Rio Grande" [1]. One agent quickly jumped into the water while another agent attempted to deploy a water rescue bag, which missed the group [1]. The agent in the river was able to pull the 34-year-old mother and 5-year-old child to safety, and then entered the river once again
+Reference: 
+{1: 'https://www.cnn.com/2022/02/13/us/border-control-rio-grande-rescue/index.html', 2: 'https://www.cnn.com/2022/02/07/us/texas-national-guard-member-dies/index.html', 3: 'https://www.cnn.com/2022/02/19/us/robot-dogs-us-mexico-border-patrol-cec/index.html', 4: 'https://www.cnn.com/2022/03/15/us/florida-key-west-migrants-arrive/index.html', 5: 'https://www.cnn.com/2022/01/21/us/florida-man-human-smuggling-arrest/index.html'}
+=====================================
+Question: 
+What is the significance of Punxsutawney Phil seeing his shadow and what does it mean for winter?
+Answer: 
+Punxsutawney Phil seeing his shadow on February 2nd calls for six more weeks of winter according to legend [1]. The National Centers for Environmental Information, a division of the National Oceanic and Atmospheric Administration, reported that Phil was only half correct in 2021, with below average temperatures in February and above average temperatures in March [1]. Phil's track record is said to be 40% accurate over the past 10 years [1].
+Reference: 
+{1: 'https://www.cnn.com/2022/02/02/us/groundhog-day-punxsutawney-phil-trnd/index.html', 2: 'https://www.cnn.com/2022/01/01/us/white-people-overcoming-racist-backgrounds-blake-cec/index.html', 3: 'https://www.cnn.com/2022/01/23/us/secure-community-network-jewish-security/index.html', 4: 'https://www.cnn.com/2022/03/17/world/full-moon-march-worm-moon-scn/index.html', 5: 'https://www.cnn.com/2022/02/15/world/full-moon-february-snow-moon-scn/index.html'}
+=====================================
+Question: 
+Why was a bridge given an overall 'poor' rating by the Pennsylvania Department of Transportation?
+Answer: 
+The Pennsylvania Department of Transportation website gave the bridge an overall condition rating of "poor." The Deck Condition was rated "4 - Poor," the Superstructure Condition was rated "4 - Poor," and the Substructure Condition was rated "6 - Satisfactory" [1]. Bridges rated 5 or 6 are classified as "Fair," and anything less than or equal to 4 is "Poor" [1]. Answering is not possible given the available information.
+Reference: 
+{1: 'https://www.cnn.com/2022/01/28/us/pittsburgh-bridge-collapse-poor-rating/index.html', 2: 'https://www.cnn.com/2022/01/29/us/pittsburgh-bridge-collapse-investigation/index.html', 3: 'https://www.cnn.com/2022/01/29/us/pittsburgh-bridge-collapse-investigation/index.html', 4: 'https://www.cnn.com/2022/01/28/us/pittsburgh-bridge-collapse-poor-rating/index.html', 5: 'https://www.cnn.com/2022/03/18/us/florida-bridgetender-manslaughter-charge/index.html'}
+=====================================
+Question: 
+Why was an Oklahoma death row inmate who requested a firing squad executed by lethal injection?
+Answer: 
+The Oklahoma death row inmate, Donald Grant, was executed by lethal injection on November 4, 2020, despite his request for a firing squad [1]. The US Supreme Court denied Grant's application for stay of execution and the Oklahoma Pardon and Parole Board voted 4-1 against clemency [1]. Grant was sentenced to death for the 2001 double murder of Brenda McElyea and Felecia Suzette Smith [1].
+Reference: 
+{1: 'https://www.cnn.com/2022/01/27/us/oklahoma-donald-grant-execution/index.html', 2: 'https://www.cnn.com/2022/02/16/us/merchant-marine-academy-usmma-sexual-assault-rape-invs/index.html', 3: 'https://www.cnn.com/2022/01/06/us/dzhokhar-tsarnaev-boston-bomber-covid-stimulus/index.html', 4: 'https://www.cnn.com/2022/03/12/us/minneapolis-protest-report/index.html', 5: 'https://www.cnn.com/2022/03/14/us/nicolas-chavez-houston-shooting-officers-reinstated/index.html'}
+=====================================
+Question: 
+What is the Milwaukee Police's belief about the multiple suspects in the fatal shooting of six people?
+Answer: 
+The Milwaukee Police believe there are multiple suspects in the shooting of six people found dead in a Wisconsin home this week, according to Police Chief Jeffrey Norman [1]. Four persons of interest - all adults - are in custody, but no criminal charges have been referred [1]. The police are still trying to determine the suspects' involvement and the motive for the targeted attack is unknown [1].
+Reference: 
+{1: 'https://www.cnn.com/2022/01/27/us/milwaukee-mass-shooting-multiple-suspects/index.html', 2: 'https://www.cnn.com/2021/12/31/us/southern-los-angeles-grocery-store-shooting/index.html', 3: 'https://www.cnn.com/2022/03/08/us/des-moines-iowa-school-shooting-tuesday/index.html', 4: 'https://www.cnn.com/2022/03/20/us/houston-shooting-teenage-birthday-party-death/index.html', 5: 'https://www.cnn.com/2022/01/17/us/texas-rabbi-training-synagogue-attack/index.html'}
+=====================================
+Question: 
+What happened to the 13-year-old boy who died after presumed fentanyl exposure at his Hartford, CT school, and what are the implications of this incident?
+Answer: 
+The 13-year-old Connecticut boy who was found unconscious after a presumed fentanyl exposure at his school last week died, according to police [1]. It is believed that the drugs were brought to the school by a student, and multiple additional bags of fentanyl were found around the school [1]. This tragedy highlights the dangers of fentanyl and the need to hold those responsible accountable for this child's death [1].
+Reference: 
+{1: 'https://www.cnn.com/2022/01/16/us/hartford-connecticut-teenager-death-fentanyl-overdose/index.html', 2: 'https://www.cnn.com/2022/01/14/us/connecticut-school-fentanyl-exposure/index.html', 3: 'https://www.cnn.com/2022/03/07/us/des-moines-iowa-school-shooting/index.html', 4: 'https://www.cnn.com/2022/01/10/us/hockey-player-death-accidental/index.html', 5: 'https://www.cnn.com/2022/03/17/us/usw-golf-team-van-crash-thursday/index.html'}
+=====================================
