@@ -11,7 +11,6 @@ load_dotenv()
 
 def initialize_document_store():
     document_store = ElasticsearchDocumentStore(host="localhost")
-    text_converter = TextConverter()
     preprocessor = PreProcessor(
         clean_whitespace=True,
         clean_header_footer=True,
@@ -22,22 +21,26 @@ def initialize_document_store():
     )
     doc_dir = "cnn/CNN_Articles_2022.csv"
     document_count = 0
-    chunk_count = 0
+    total_chunks = 0
+    chunks = []
     print("=================WRITING DOCUMENTS=================")
     df = pd.read_csv(doc_dir)
     for index, row in df.iterrows():
         document_count += 1
-        doc = Document(content=row['Article text'], meta={"URL": row['Url']})
-        chunks = preprocessor.process([doc])
-        chunk_count += len(chunks)
+        doc = Document(content=row['Article text'], meta={"URL": row['Url'], "Date published": row['Date published'], "Headline": row['Headline']})
+        chunks += preprocessor.process([doc])
+        # print("chunk_count: ", len(chunks))
+        if document_count % 50 == 0:
+            document_store.write_documents(chunks)
+            total_chunks += len(chunks)
+            chunks = []
+            print("document_count: ", document_count)
+    if len(chunks) > 0:
         document_store.write_documents(chunks)
-        if document_count == 10:
-            break
-        # if document_count % 300 == 0:
-        #     print("document_count: ", document_count)
+        total_chunks += len(chunks)
     print("=================DONE WRITING DOCUMENTS=================")
-    print("document_count: ", document_count)
-    print("chunk_count: ", chunk_count)
+    print("total document_count: ", document_count)
+    print("total chunk_count: ", total_chunks)
     return document_store
 
 def initialize_opensearch_store():
@@ -78,4 +81,4 @@ def initialize_opensearch_store():
     return document_store
 
 
-document_store = initialize_opensearch_store()
+document_store = initialize_document_store()

@@ -25,7 +25,8 @@ def setup_logging(logging_level):
 url = os.getenv("OPENSEARCH_URL")
 username =  os.getenv("OPENSEARCH_USERNAME")
 password = os.getenv("OPENSEARCH_PASSWORD")
-document_store = OpenSearchDocumentStore(host=url, username=username, password=password, port=443, verify_certs=True)
+# document_store = OpenSearchDocumentStore(host=url, username=username, password=password, port=443, verify_certs=True)
+document_store = ElasticsearchDocumentStore(host="localhost")
 
 # Set up the retriever and reader
 def setup_retriever_and_reader():

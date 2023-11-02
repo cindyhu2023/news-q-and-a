@@ -22,3 +22,17 @@ def initialize_document_store_and_pipeline():
     return document_store, indexing_pipeline
 
 document_store, indexing_pipeline = initialize_document_store_and_pipeline()
+
+
+questions = [
+    "What happened during the shooting incident outside a southern Los Angeles grocery store that left six people injured?",
+    "Why were three Pennsylvania officers charged with manslaughter in the fatal shooting of an 8-year-old?",
+    "How is the reform-minded Los Angeles County DA, George Gascón, being threatened by package thefts and other high-profile crimes?",
+    "What happened during the head-on crash that killed nine people and involved the University of the Southwest golf teams?",
+    "How did Border Patrol rescue migrants in the Rio Grande?",
+    "What is the significance of Punxsutawney Phil seeing his shadow and what does it mean for winter?",
+    "Why was a bridge given an overall 'poor' rating by the Pennsylvania Department of Transportation?",
+    "Why was an Oklahoma death row inmate who requested a firing squad executed by lethal injection?",
+    "What is the Milwaukee Police's belief about the multiple suspects in the fatal shooting of six people?",
+    "What happened to the 13-year-old boy who died after presumed fentanyl exposure at his Hartford, CT school, and what are the implications of this incident?",
+]
