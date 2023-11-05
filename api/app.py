@@ -21,7 +21,15 @@ def setup_logging(logging_level):
     logging.basicConfig(format="%(levelname)s - %(name)s -  %(message)s", level=logging_level)
     logging.getLogger("haystack").setLevel(logging_level)
 
-document_store = ElasticsearchDocumentStore(host="localhost")
+# document_store = ElasticsearchDocumentStore(host="localhost")
+
+url = os.getenv("OPENSEARCH_URL")
+username =  os.getenv("OPENSEARCH_USERNAME")
+password = os.getenv("OPENSEARCH_PASSWORD")
+document_store = OpenSearchDocumentStore(
+    host=url, username=username, password=password, 
+    port=443, verify_certs=True,
+)
 
 retriever = EmbeddingRetriever(
     document_store=document_store,
@@ -83,6 +91,6 @@ def ask_question():
 
     
 # Running app
-# if __name__ == '__main__':
-#     setup_logging(logging.INFO)
-#     app.run(debug=True)
+if __name__ == '__main__':
+    setup_logging(logging.INFO)
+    app.run(debug=True)
