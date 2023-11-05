@@ -1,2 +1,3 @@
-/web
-/api/cnn
+web/
+api/cnn/
+api/__pycache__/
