@@ -1,11 +1,9 @@
 from flask import Flask, request, jsonify
 from haystack.document_stores import ElasticsearchDocumentStore, OpenSearchDocumentStore
 import logging
-from haystack import Pipeline, Document
-# from haystack.document import Document
-from haystack.nodes import TextConverter, PreProcessor, BM25Retriever, FARMReader, PromptModel, PromptNode, PromptTemplate, AnswerParser, EmbeddingRetriever
+from haystack import Pipeline
+from haystack.nodes import PromptModel, PromptNode, PromptTemplate, AnswerParser, EmbeddingRetriever
 import os
-from haystack.utils import print_answers
 from dotenv import load_dotenv
 
 load_dotenv()
