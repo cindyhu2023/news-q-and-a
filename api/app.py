@@ -3,7 +3,7 @@ from haystack.document_stores import ElasticsearchDocumentStore, OpenSearchDocum
 import logging
 from haystack import Pipeline, Document
 # from haystack.document import Document
-from haystack.nodes import TextConverter, PreProcessor, BM25Retriever, FARMReader, PromptModel, PromptNode, PromptTemplate, AnswerParser
+from haystack.nodes import TextConverter, PreProcessor, BM25Retriever, FARMReader, PromptModel, PromptNode, PromptTemplate, AnswerParser, EmbeddingRetriever
 import os
 from haystack.utils import print_answers
 from dotenv import load_dotenv
@@ -21,22 +21,16 @@ def setup_logging(logging_level):
     logging.basicConfig(format="%(levelname)s - %(name)s -  %(message)s", level=logging_level)
     logging.getLogger("haystack").setLevel(logging_level)
 
-# document_store = ElasticsearchDocumentStore(host="localhost")
-url = os.getenv("OPENSEARCH_URL")
-username =  os.getenv("OPENSEARCH_USERNAME")
-password = os.getenv("OPENSEARCH_PASSWORD")
-# document_store = OpenSearchDocumentStore(host=url, username=username, password=password, port=443, verify_certs=True)
 document_store = ElasticsearchDocumentStore(host="localhost")
 
-# Set up the retriever and reader
-def setup_retriever_and_reader():
-    retriever = BM25Retriever(document_store=document_store, top_k=3)
-    reader = FARMReader(model_name_or_path="deepset/roberta-base-squad2", use_gpu=False)
-    return retriever, reader
+retriever = EmbeddingRetriever(
+    document_store=document_store,
+    embedding_model="sentence-transformers/multi-qa-mpnet-base-dot-v1",
+    model_format="sentence_transformers",
+    top_k=5
+)
 
-retriever, reader = setup_retriever_and_reader()
-
-def query(user_query, retriever, reader):
+def query(user_query, retriever):
     openai_api_key = os.getenv("OPEN_AI_KEY")
     prompt_template = '''
         Create a concise and informative answer (no more than 50 words) for a given question 
@@ -58,7 +52,7 @@ def query(user_query, retriever, reader):
 
     querying_pipeline = Pipeline()
     querying_pipeline.add_node(component=retriever, name="Retriever", inputs=["Query"])
-    querying_pipeline.add_node(component=reader, name="Reader", inputs=["Retriever"])
+    # querying_pipeline.add_node(component=reader, name="Reader", inputs=["Retriever"])
     querying_pipeline.add_node(component=pn_open_ai, name="prompt_node", inputs=["Retriever"])
     output = querying_pipeline.run(query=user_query)
     print("Output: ", output.keys())
@@ -73,7 +67,7 @@ def query(user_query, retriever, reader):
 def ask_question():
     data = request.get_json()
     question = data.get('question')
-    answer, reference = query(question, retriever, reader)
+    answer, reference = query(question, retriever)
     print("Answer: ", answer)
     print("Reference: ", reference)
     
