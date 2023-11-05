@@ -91,6 +91,6 @@ def ask_question():
 
     
 # Running app
-if __name__ == '__main__':
-    setup_logging(logging.INFO)
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     setup_logging(logging.INFO)
+#     app.run()
