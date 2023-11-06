@@ -1,3 +1,9 @@
-web
-api/cnn
-api/__pycache__
+/web
+/api/cnn
+*.csv
+
+./web
+./api/cnn
+
+web/
+api/cnn/
