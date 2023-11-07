@@ -8,7 +8,8 @@
   roles:
     - role: knightlab
     - role: repo
-    - role: dotenv
+    # Removed dotenv to avoid need for vault setup. Add .env vars manually
+    # - role: dotenv
     - role: virtualenv
     - role: service
     - role: nginx
