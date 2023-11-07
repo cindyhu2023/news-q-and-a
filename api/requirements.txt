@@ -1,4 +1,7 @@
 farm-haystack==1.21.0
 flask==3.0.0
+gunicorn==21.2.0
 opensearch-py==2.3.2
 python-dotenv==1.0.0
+sentence-transformers==2.2.2
+wheel==0.38.4
