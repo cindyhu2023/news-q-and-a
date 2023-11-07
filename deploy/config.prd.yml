@@ -1,4 +1,4 @@
-domains: "newsq-api.knightlab.com"
+domains: "newsq.knightlab.com"
 
 init_env_prd:
   EXAMPLE_VAR: "This is production"
