@@ -1,0 +1,34 @@
+project_name: NewsQ
+service_name: "{{ project_name|lower }}"
+gitdeploy_version: "1.0.6"
+python_version: "3.10.2"
+service_port: "{{ newsq_port }}"
+
+
+### Set these variables ###
+
+application_user: apps
+application_group: apps
+install_root: "/home/apps/sites"
+exec_path: # may be needed if python is not on the path, alternatively set the full path to python above
+ssl_certs: # See the nginx role for details.
+domains:  # domain where your application is hosted. you may want to set this distinctly in the environment specific config
+
+##########################
+
+playbooks:
+  - playbook.deploy.yml
+
+# these will be merged with deployment-specific env into variable init_env
+init_env_common:
+  PROJECT_NAME: "{{ project_name }}"
+
+
+deploy_dir: "{{ install_root }}/news-q-and-a"
+application_dir: "{{ deploy_dir }}"
+env_file: "{{ deploy_dir }}/.env"
+envrc_file: "{{ deploy_dir }}/.envrc"
+virtualenv: "{{ deploy_dir }}/.venv"
+project_repo: "git@github.com:cindyhu2023/news-q-and-a.git"
+requirements_file: "{{ deploy_dir }}/requirements-deploy.txt"
+wsgi_application: "api.app:app"
