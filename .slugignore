@@ -1,9 +1,0 @@
-/web
-/api/cnn
-*.csv
-
-./web
-./api/cnn
-
-web/
-api/cnn/
