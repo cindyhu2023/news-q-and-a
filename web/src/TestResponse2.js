@@ -1,5 +1,5 @@
 // a react component that displays questions and responses from responses.json
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 // import data from './test_response/responses.json';
 import test1 from './test_response_2/plain_3_openai.json';
 import test2 from './test_response_2/embedding_5_openai.json';
@@ -8,7 +8,7 @@ import test4 from './test_response_2/plain_10_roberta.json';
 import test5 from './test_response_2/embedding_10_roberta.json';
 import test6 from './test_response_2/embedding_10_distilbert.json';
 
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Tab } from '@mui/material';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 
 const tests = [
     {

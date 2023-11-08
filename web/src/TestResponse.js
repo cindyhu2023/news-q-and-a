@@ -1,12 +1,12 @@
 // a react component that displays questions and responses from responses.json
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 // import data from './test_response/responses.json';
 import test1 from './test_response/responses.json';
 import test2 from './test_response/responses_reader_roberta-base-squad2.json';
 import test3 from './test_response/responses_retriever_reader.json';
 import test4 from './test_response/responses_reader_distilled.json';
 import test5 from './test_response/responses_open_ai.json';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Tab } from '@mui/material';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 
 const tests = [
     {

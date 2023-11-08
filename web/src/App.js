@@ -1,7 +1,7 @@
 import Question from './Question';
 import TestResponse from './TestResponse';
 import TestResponse2 from './TestResponse2';
-import { BrowserRouter as Router, Route, Switch, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (

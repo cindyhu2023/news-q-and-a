@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Box from '@mui/material/Box';
-import Input from '@mui/material/Input';
 import { Button } from '@mui/material';
 import TextField from '@mui/material/TextField';
 
@@ -33,7 +32,7 @@ function Question() {
 
     return (
         <div>
-            <h2>Ask a Question</h2>
+            <h2>Ask a question</h2>
             <Box
                 component="form"
                 sx={{
@@ -54,6 +53,7 @@ function Question() {
                 
             </Box>
             <Button variant="contained" onClick={handleSubmit} size="small">Submit</Button>
+            <p>(currently using CNN news from January 2022 to March 2022)</p>
             {question && <div>
                 <h2>Question: </h2>
                 <p>{question}</p>
