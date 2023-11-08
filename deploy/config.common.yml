@@ -3,6 +3,7 @@ service_name: "{{ project_name|lower }}"
 gitdeploy_version: "1.0.6"
 python_version: "3.10.2"
 service_port: "{{ newsq_port }}"
+nginx_template: "newsq.conf"
 
 
 ### Set these variables ###
