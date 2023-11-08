@@ -1,0 +1,7 @@
+domains: "newsq.knightlab.com"
+
+init_env_prd:
+  EXAMPLE_VAR: "This is production"
+
+init_env: "{{ init_env_common|combine(init_env_prd) }}"
+service_exec: "{{ virtualenv}}/bin/gunicorn -b :{{ service_port }} --workers 1 {{ wsgi_application }}"
