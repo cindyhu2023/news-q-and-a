@@ -1,6 +1,7 @@
 .env
 .envrc
 .venv
+.python-version
 __pycache__
 .DS_Store
 server/.DS_Store
