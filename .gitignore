@@ -5,3 +5,4 @@ server/.DS_Store
 server/cnn/CNN_Articels_clean.csv
 server/cnn/CNN_Articels_clean2.csv
 .vercel
+api/newsQAenv
