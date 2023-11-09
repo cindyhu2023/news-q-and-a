@@ -5,6 +5,10 @@ from haystack import Pipeline
 from haystack.nodes import PromptModel, PromptNode, PromptTemplate, AnswerParser, EmbeddingRetriever
 import os
 from dotenv import load_dotenv
+from flask_mysqldb import MySQL
+import datetime
+import pytz
+import json
 
 load_dotenv()
 
@@ -21,6 +25,15 @@ def setup_logging(logging_level):
 
 # document_store = ElasticsearchDocumentStore(host="localhost")
 
+################## MYSQL LOGGING ##################
+app.config['MYSQL_HOST'] = os.getenv("RDS_ENDPOINT")
+app.config['MYSQL_USER'] = os.getenv("USER_NAME")
+app.config['MYSQL_PASSWORD'] = os.getenv("USER_PWD")
+app.config['MYSQL_DB'] = os.getenv("DB_NAME")
+
+mysql = MySQL(app)
+
+################## OPEN SEARCH ##################
 url = os.getenv("OPENSEARCH_URL")
 username =  os.getenv("OPENSEARCH_USERNAME")
 password = os.getenv("OPENSEARCH_PASSWORD")
@@ -83,6 +96,16 @@ def ask_question():
             'answer': answer,
             'reference': reference 
         }
+
+        # log to database
+        current_time_ct = datetime.datetime.now(pytz.timezone('US/Central'))
+        current_time_string = current_time_ct.strftime('%Y-%m-%d %H:%M:%S %Z')
+
+        cur = mysql.connection.cursor()
+        cur.execute("INSERT INTO qaRecord (question, answer, reference, timestamp) VALUES(%s, %s, %s, %s)", (question, answer, json.dumps(reference), current_time_string))
+        mysql.connection.commit()
+        cur.close()
+
         return jsonify(response_data) 
     else:
         return jsonify({'error': 'Question not provided.'}), 400  # Return error as JSON
