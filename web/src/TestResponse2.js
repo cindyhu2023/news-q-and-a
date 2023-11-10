@@ -7,14 +7,15 @@ import test3 from './test_response_2/embedding_3_openai.json';
 import test4 from './test_response_2/plain_10_roberta.json';
 import test5 from './test_response_2/embedding_10_roberta.json';
 import test6 from './test_response_2/embedding_10_distilbert.json';
+import test7 from './test_response_2/gpt-3.5-turbo.json';
 
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 
 const tests = [
-    {
-        "name": "plain_3_openai",
-        "response": test1
-    },
+    // {
+    //     "name": "plain_3_openai",
+    //     "response": test1
+    // },
     {
         "name": "embedding_3_openai",
         "response": test3
@@ -24,17 +25,21 @@ const tests = [
         "response": test2
     },
     {
-        "name": "plain_10_reader_roberta",
-        "response": test4
+        "name": "gpt-3.5-turbo",
+        "response": test7
     },
-    {
-        "name": "embedding_10_reader_roberta",
-        "response": test5
-    },
-    {
-        "name": "embedding_10_reader_distilled",
-        "response": test6
-    }
+    // {
+    //     "name": "plain_10_reader_roberta",
+    //     "response": test4
+    // },
+    // {
+    //     "name": "embedding_10_reader_roberta",
+    //     "response": test5
+    // },
+    // {
+    //     "name": "embedding_10_reader_distilled",
+    //     "response": test6
+    // }
 
 ]
 

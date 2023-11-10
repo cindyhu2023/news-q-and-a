@@ -19,9 +19,8 @@ app = Flask(__name__)
 def home():
     return "Hello World!"
 
-def setup_logging(logging_level):
-    logging.basicConfig(format="%(levelname)s - %(name)s -  %(message)s", level=logging_level)
-    logging.getLogger("haystack").setLevel(logging_level)
+logging.basicConfig(format="%(levelname)s - %(name)s -  %(message)s", level=logging.INFO)
+logging.getLogger("haystack").setLevel(logging.INFO)
 
 # document_store = ElasticsearchDocumentStore(host="localhost")
 
@@ -56,7 +55,7 @@ def query(user_query, retriever):
         based solely on the given documents. You must only use information from the given documents. 
         Use an unbiased and journalistic tone. Do not repeat text.
         Cite the documents using numeric references in the text. 
-        If multiple documents contain the answer, cite those documents like [1] next to the sentence in the answer. 
+        If multiple documents contain the answer, cite those documents like [1,2] at the end of the sentence in the answer. 
         If the documents do not contain the answer to the question, say that 'answering is not possible given the available information.'
 
         {join(documents, delimiter=new_line, pattern=new_line+'Document[$idx]: $content', str_replace={new_line: ' ', '[': '(', ']': ')'})}
@@ -66,15 +65,17 @@ def query(user_query, retriever):
     # question_answering_with_references = PromptTemplate("deepset/question-answering-with-references", output_parser=AnswerParser(reference_pattern=r"Document\[(\d+)\]"))
     question_answering_with_references = PromptTemplate(prompt=prompt_template, output_parser=AnswerParser(reference_pattern=r"Document\[(\d+)\]"))
 
-    prompt_open_ai = PromptModel(model_name_or_path="text-davinci-003", api_key=openai_api_key)
+    # prompt_open_ai = PromptModel(model_name_or_path="text-davinci-003", api_key=openai_api_key)
+    prompt_open_ai = PromptModel(model_name_or_path="gpt-3.5-turbo", api_key=openai_api_key)
     pn_open_ai = PromptNode(prompt_open_ai, default_prompt_template=question_answering_with_references)
 
     querying_pipeline = Pipeline()
     querying_pipeline.add_node(component=retriever, name="Retriever", inputs=["Query"])
     # querying_pipeline.add_node(component=reader, name="Reader", inputs=["Retriever"])
     querying_pipeline.add_node(component=pn_open_ai, name="prompt_node", inputs=["Retriever"])
-    output = querying_pipeline.run(query=user_query)
-    print("Output: ", output.keys())
+    output = querying_pipeline.run(query=user_query, params={"prompt_node": {"invocation_context": None}}, debug=True)
+    # print(output)
+    print(output["answers"][0].meta["prompt"])
     answer = output["answers"][0].answer
     reference = {}
     for idx, doc in enumerate(output["documents"]):
@@ -87,8 +88,6 @@ def ask_question():
     data = request.get_json()
     question = data.get('question')
     answer, reference = query(question, retriever)
-    print("Answer: ", answer)
-    print("Reference: ", reference)
     
     if question:
         response_data = {
