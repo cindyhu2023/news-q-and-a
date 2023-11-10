@@ -7,6 +7,7 @@ function Question() {
     const [response, setResponse] = useState('');
     const [question, setQuestion] = useState('');
     const [reference, setReference] = useState();
+    const [endpoint, setEndpoint] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -22,6 +23,7 @@ function Question() {
                 const jsonResponse = await response.json();
                 setResponse(jsonResponse.answer);
                 setReference(jsonResponse.reference);
+                setEndpoint(jsonResponse.endpoint);
             } else {
                 console.error('Error submitting question.');
             }
@@ -76,6 +78,9 @@ function Question() {
                 }
                 </div>
             }
+            <p>sql end point</p>
+            {endpoint && <p>{endpoint}</p>}
+
         </div>
     );
 }
