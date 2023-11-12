@@ -5,6 +5,14 @@ import test1 from './test_response_2/plain_3_openai.json';
 import test2 from './test_response_2/embedding_5_openai.json';
 import test3 from './test_response_2/embedding_3_openai.json'; 
 
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
+import TextField from '@mui/material/TextField';
+import { Button } from '@mui/material';
+
 const tests = [
     {
         "name": "plain_3_openai",
@@ -37,22 +45,71 @@ const questions = [
     "What measures are the Chicago Teachers Union implementing to ensure the safety of in-person learning during the COVID-19 pandemic?"
 ]
 
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
 function SampleResponse(){
     // display one question and its response, click "next" to display the next question and response
     const [index, setIndex] = React.useState(0);
-    function submit(){
-        console.log("submit");
+    const [samples, setSamples] = React.useState([]);
+    const [responses, setResponses] = React.useState({});
+    useEffect(() => {
+        let randomSamples = [];
+        for (let i = 0; i < 14; i += 5) {
+            const randomIndex = getRandomNumber(i, i + 4);
+            randomSamples.push(randomIndex);
+        }
+        setSamples(randomSamples);
+        console.log(randomSamples);
+    }, []);
+
+
+    function submit(e){
+        e.preventDefault();
+        console.log(responses);
     }
     return (
         <div>
-        <p><em>{questions[index]}</em></p>
-        <p>{tests[0].response[index].answer}</p>
-        <p>{tests[1].response[index].answer}</p>
-        <p>{tests[2].response[index].answer}</p>
-        <button onClick={() => setIndex((index + 1) % questions.length)}>back</button>
+         <form onSubmit={submit}>
+        { samples.map((sample, index) => { return (
+            <FormControl>
+            <FormLabel>{questions[sample]}</FormLabel>
+            <RadioGroup
+                required
+                name="radio-buttons-group"
+                onChange={(e) => {
+                    setResponses(responses => ({...responses, [index]: {"question": questions[sample], "answer": e.target.value}, "reason": ""}));
+                }}
+            >
+                <FormControlLabel value={tests[0].response[sample].answer} control={<Radio />} label={tests[0].response[sample].answer} />
+                <FormControlLabel value={tests[1].response[sample].answer} control={<Radio />} label={tests[1].response[sample].answer} />
+                <FormControlLabel value={tests[2].response[sample].answer} control={<Radio />} label={tests[2].response[sample].answer} />
+            </RadioGroup>
+            <TextField
+                id="filled-helperText"
+                label="Why?"
+                defaultValue=""
+                helperText="Explain why you chose this answer if there is a reason."
+                variant="standard"
+                onChange={(e) => {
+                    setResponses(responses => ({...responses, 
+                    [index]: {
+                        "question": questions[sample], 
+                        "answer": responses[index] ? responses[index]["answer"] : "",
+                        "reason": e.target.value
+                    }}));
+                }}
+            />
+            <Button onClick={() => setIndex((index + 1) % samples.length)}>back</Button>
         {
-            index === questions.length - 1 ? <button onClick={submit}>submit</button> : <button onClick={() => setIndex((index + 1) % questions.length)}>next</button>
+            index === questions.length - 1 
+            ? <Button onClick={submit}>submit</Button> 
+            : <Button onClick={() => setIndex((index + 1) % samples.length)}>next</Button>
         }
+        </FormControl>
+        )})}
+        </form>
         </div>
     )
 
