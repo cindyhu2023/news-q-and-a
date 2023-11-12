@@ -93,7 +93,8 @@ def ask_question():
         response_data = {
             'question': question,
             'answer': answer,
-            'reference': reference 
+            'reference': reference,
+            'endpoint': os.getenv("RDS_ENDPOINT")
         }
 
         # log to database
