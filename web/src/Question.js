@@ -45,7 +45,7 @@ function Question() {
   return (
     <div>
       <h2>Section 1/4 - Ask Questions about 2022 News</h2>
-      <p>Please ask at least 3 questions. <b>The data source is CNN news from January 2022 to March 2022</b>, so please only ask about news that happen in between January 2022 to March 2022.</p>
+      <p>Please submit at least 3 questions. <b>The data source is CNN news from January 2022 to March 2022</b>, so please only ask about news that happen in between January 2022 to March 2022.</p>
       <p>If you don't remember what happened during that time, <a href="https://docs.google.com/document/d/1mZZ0QkbD1SOg9jsZvd73Ns-2rWq-M5LK82cekj4NTrg/edit?usp=sharing" target="_blank">check this doc!</a></p>
       
       <Box
