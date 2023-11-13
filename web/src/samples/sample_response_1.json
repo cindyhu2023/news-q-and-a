@@ -1,8 +1,8 @@
 {
     "default": [
         {
-            "question": "Can pig hearts be used for human transplants?",
-            "answer": "Yes, pig hearts can be used for human transplants. A 57-year-old man in Maryland received a genetically modified pig heart in a transplant surgery [1]. The surgery was granted emergency authorization by the FDA [1]. However, the success of the transplant is still uncertain and the patient will be monitored for complications [1].",
+            "question": "Can pig hearts be used for human transplants? Is it safe?",
+            "answer": "Pig hearts can be used for human transplants, as seen in the case of a 57-year-old Maryland man who received a genetically modified pig heart in a first-of-its-kind transplant surgery [1]. The surgery was deemed necessary as the patient was ineligible for conventional heart transplant options [1]. However, the safety of pig heart transplants is still uncertain, and monitoring for complications and immune system problems is necessary [1]. Further research and monitoring are needed to determine the long-term success and safety of pig heart transplants [1].",
             "reference": {
                 "1": "https://www.cnn.com/2022/01/10/health/genetically-modified-pig-heart-transplant/index.html"
             }
@@ -119,10 +119,11 @@
     ],
     "short": [
         {
-            "question": "Can pig hearts be used for human transplants?",
-            "answer": "Yes, pig hearts can be used for human transplants [1].",
+            "question": "Can pig hearts be used for human transplants? Is it safe?",
+            "answer": "Yes, pig hearts can be used for human transplants [1]. The safety of pig heart transplants is uncertain and still being studied [1,2].",
             "reference": {
-                "1": "https://www.cnn.com/2022/01/10/health/genetically-modified-pig-heart-transplant/index.html"
+                "1": "https://www.cnn.com/2022/01/10/health/genetically-modified-pig-heart-transplant/index.html",
+                "2": "https://www.cnn.com/2022/01/15/opinions/pig-heart-transplant-big-deal-reiner/index.html"
             }
         },
         {
@@ -237,8 +238,8 @@
     ],
     "long": [
         {
-            "question": "Can pig hearts be used for human transplants?",
-            "answer": "Yes, pig hearts can be used for human transplants. In a recent breakthrough surgery, a 57-year-old man in Maryland received a genetically modified pig heart transplant [1]. This was done because he was ineligible for a conventional heart transplant or an artificial heart pump [1]. The surgery was authorized by the US Food and Drug Administration and the patient's recovery is being monitored [1]. Pig heart valves have been transplanted into humans for many years, and the recent transplant of a genetically modified pig kidney into a brain-dead woman in New York was also successful [1]. While the long-term success of pig heart transplants is still uncertain, this procedure opens up the possibility of an almost unlimited supply of donor organs in the future [2].",
+            "question": "Can pig hearts be used for human transplants? Is it safe?",
+            "answer": "Yes, pig hearts can be used for human transplants. In a first-of-its-kind transplant surgery, a 57-year-old man in Maryland received a genetically modified pig heart [1]. The surgery was authorized by the US Food and Drug Administration [1]. To make the pig heart suitable for transplantation, three genes responsible for rejection by the human immune system were removed, and six human genes responsible for immune acceptance were inserted [1,2]. However, the safety of pig heart transplants is still uncertain, as the success of the transplant and the patient's recovery are still being monitored [1].",
             "reference": {
                 "1": "https://www.cnn.com/2022/01/10/health/genetically-modified-pig-heart-transplant/index.html",
                 "2": "https://www.cnn.com/2022/01/15/opinions/pig-heart-transplant-big-deal-reiner/index.html"

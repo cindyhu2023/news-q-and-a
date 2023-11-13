@@ -10,24 +10,24 @@ import TextField from "@mui/material/TextField";
 import { Button } from "@mui/material";
 
 const questions = [
-  //0-5
-  "Can pig hearts be used for human transplants?",
-  "Why did the man receive a pig heart transplant?",
-  "Why is Elizabeth Holmes on trial?",
-  "Is Elizabeth Holmes guilty?",
-  "What was the Supreme Court's ruling on the Biden administration's vaccine mandate for large employers?",
-  //6-10
-  "What companies took action against Russia?",
-  "What is the US's stance on the Ukraine crisis?",
-  "What is China's stance on the Ukraine crisis?",
-  "Did the US send troops to Ukraine?",
-  "Why are companies are moving out of Russia?",
-  //11-15
-  "Who's nominated for best supporting actress?",
-  "Who is Ketanji Jackson?",
-  "What's the controversy surrounding Eileen Gu?",
-  "Who is Eileen Gu?",
-  "What images did James Webb Telescope capture?",
+   // 0-5
+    "Can pig hearts be used for human transplants? Is it safe?",
+    "Why did the man receive a pig heart transplant?",
+    "Why is Elizabeth Holmes on trial?",
+    "Is Elizabeth Holmes guilty?",
+    "What was the Supreme Court's ruling on the Biden administration's vaccine mandate for large employers?",
+    // 6-10
+    "What companies took action against Russia?",
+    "What is the US's stance on the Ukraine crisis?",
+    "What is China's stance on the Ukraine crisis?",
+    "Did the US send troops to Ukraine?",
+    "Why are companies are moving out of Russia?",
+    // 11-15
+    "Who's nominated for best supporting actress?",
+    "Who is Ketanji Jackson?",
+    "What's the controversy surrounding Eileen Gu",
+    "Who is Eileen Gu?",
+    "What images did James Webb Telescope capture?"
 ];
 
 function getRandomNumber(min, max) {
@@ -105,7 +105,7 @@ function SampleResponse({ heading, sampleRes, mapping, nextPage, sessionId }) {
             const options = optOrders[index].map((order, i) => {
               return {
                 label: abc[i] + sampleRes[order][sample].answer,
-                value: order + "|" + sampleRes[order][sample].answer,
+                value: order + " | " + sampleRes[order][sample].answer,
               };
             });
             return (

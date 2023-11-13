@@ -31,10 +31,22 @@ short_prompt_template = '''
         Question: {query}; Answer:
     '''
 
+temperature_prompt_template = '''
+        Answer the given question based solely on the given documents. 
+        You can include as much or as little relevant information in the answer, but the answer should not be more than 100 words.
+        Cite the documents using numeric references in the text. 
+        If multiple documents contain the answer, cite those documents like [1,2] at the end of the sentence in the answer. 
+        If the documents do not contain the answer to the question, say that 'answering is not possible given the available information.'
+
+        {join(documents, delimiter=new_line, pattern=new_line+'Document[$idx]: $content', str_replace={new_line: ' ', '[': '(', ']': ')'})}
+
+        Question: {query}; Answer:
+    '''
+
 
 questions = [
     # 0-5
-    "Can pig hearts be used for human transplants?",
+    "Can pig hearts be used for human transplants? Is it safe?",
     "Why did the man receive a pig heart transplant?",
     "Why is Elizabeth Holmes on trial?",
     "Is Elizabeth Holmes guilty?",

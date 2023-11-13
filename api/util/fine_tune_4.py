@@ -1,15 +1,10 @@
-from flask import Flask, request, jsonify
 from haystack.document_stores import OpenSearchDocumentStore
-import logging
-from haystack import Pipeline, Document
-# from haystack.document import Document
-from haystack.nodes import BM25Retriever, FARMReader, PromptModel, PromptNode, PromptTemplate, AnswerParser, EmbeddingRetriever
+from haystack.nodes import  PromptTemplate, EmbeddingRetriever
 import os
-from haystack.utils import print_answers
 from dotenv import load_dotenv
 import json
 from openai import OpenAI
-from config import long_prompt_template, short_prompt_template, default_prompt_template, questions
+from config import long_prompt_template, short_prompt_template, default_prompt_template, temperature_prompt_template, questions
 from utils import remove_duplicate_references
 
 load_dotenv()
@@ -76,28 +71,30 @@ def run():
                 "reference": reference
             })
         responses1[template["name"]] = res
-    with open("sample_response_1.json", 'w') as outfile:
+    with open("sample_response_1.5.json", 'w') as outfile:
           json.dump(responses1, outfile)
     print("Done writing sample_response_1.json")
 
-    responses2 = {}
-    temps = [
-        {"name": "temperature_0.5", "temperature": 0.5},
-        {"name": "temperature_0.9", "temperature": 0.9},
-        {"name": "temperature_0.1", "temperature": 0.1}
-    ]
-    for temp in temps:
-        res = []
-        for question in questions:
-            answer, reference = query(question, temp["temperature"], default_prompt_template)
-            res.append({
-                "question": question,
-                "answer": answer,
-                "reference": reference
-            })
-        responses2[temp["name"]] = res
-    with open("sample_response_2.json", 'w') as outfile:
-          json.dump(responses2, outfile)
+    # responses2 = {}
+    # temps = [
+    #     {"name": "temperature_0.5", "temperature": 0.5},
+    #     {"name": "temperature_0.9", "temperature": 0.9},
+    #     {"name": "temperature_0.1", "temperature": 0.1}
+    # ]
+    # for temp in temps:
+    #     print("temp: ", temp["name"])
+    #     res = []
+    #     for question in questions:
+    #         print("question: ", question)
+    #         answer, reference = query(question, temp["temperature"], temperature_prompt_template)
+    #         res.append({
+    #             "question": question,
+    #             "answer": answer,
+    #             "reference": reference
+    #         })
+    #     responses2[temp["name"]] = res
+    # with open("sample_response_6.json", 'w') as outfile:
+    #       json.dump(responses2, outfile)
 
     return
 
