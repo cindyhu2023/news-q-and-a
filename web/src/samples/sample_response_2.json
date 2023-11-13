@@ -1,0 +1,359 @@
+{
+    "temperature_0.5": [
+        {
+            "question": "Can pig hearts be used for human transplants?",
+            "answer": "Yes, pig hearts can be used for human transplants. In a recent surgery, a 57-year-old man received a genetically modified pig heart as a transplant option [1]. Pig heart valves have also been transplanted into humans for many years [1].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/01/10/health/genetically-modified-pig-heart-transplant/index.html"
+            }
+        },
+        {
+            "question": "Why did the man receive a pig heart transplant?",
+            "answer": "The man received a pig heart transplant because it was the only currently available option for him, as he was ineligible for a conventional heart transplant or an artificial heart pump [1].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/01/10/health/genetically-modified-pig-heart-transplant/index.html"
+            }
+        },
+        {
+            "question": "Why is Elizabeth Holmes on trial?",
+            "answer": "Elizabeth Holmes is on trial for charges of defrauding investors and patients. She was found guilty on four charges of defrauding investors, including conspiracy to defraud investors and three wire fraud counts tied to specific investors. However, she was found not guilty on charges concerning defrauding patients and one charge of conspiracy to defraud patients [1].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/01/03/tech/elizabeth-holmes-verdict/index.html"
+            }
+        },
+        {
+            "question": "Is Elizabeth Holmes guilty?",
+            "answer": "Yes, Elizabeth Holmes is guilty. She was found guilty on four charges of defrauding investors [1].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/01/03/tech/elizabeth-holmes-verdict/index.html"
+            }
+        },
+        {
+            "question": "What was the Supreme Court's ruling on the Biden administration's vaccine mandate for large employers?",
+            "answer": "The Supreme Court blocked the Biden administration's vaccine mandate for large employers, freezing a lower court opinion that allowed the mandate to go into effect nationwide [1].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/01/13/business/us-supreme-court-ruling-vaccine-mandate/index.html"
+            }
+        },
+        {
+            "question": "What companies took action against Russia?",
+            "answer": "Companies that took action against Russia include BASF, BP, Coca-Cola HBC, Ford, General Motors, McDonald's, Starbucks, and PepsiCo [1,2,3].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/02/25/investing/business-russia-sanctions/index.html",
+                "2": "https://www.cnn.com/2022/03/02/business/companies-pulling-back-russia-ukraine-war-intl-hnk/index.html",
+                "3": "https://www.cnn.com/2022/03/08/business/mcdonalds-pepsi-coke-russia/index.html"
+            }
+        },
+        {
+            "question": "What is the US's stance on the Ukraine crisis?",
+            "answer": "The US's stance on the Ukraine crisis is that it is wary of intervention and believes it should play a minor role or no role at all. However, the US has not taken anything off the table, including the possibility of targeting the Russian energy sector with sanctions [1,2].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/02/27/politics/us-troops-ukraine-russia-what-matters/index.html",
+                "2": "https://www.cnn.com/2022/02/24/politics/us-troops-ukraine-russia-nato/index.html"
+            }
+        },
+        {
+            "question": "What is China's stance on the Ukraine crisis?",
+            "answer": "China has not condemned the Russian attack on Ukraine and has expressed understanding for Russia's \"legitimate security concerns.\" While China has links to Ukraine and has called for a diplomatic resolution to the crisis, it wants to avoid being impacted by sanctions and has emphasized its principle of respecting national sovereignty and territorial integrity [1,2,3,4,5].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/03/07/asia/china-india-ukraine-reaction-intl-hnk-dst/index.html",
+                "2": "https://www.cnn.com/2022/02/23/china/taiwan-ukraine-parallels-china-russia-intl-hnk-mic/index.html",
+                "3": "https://www.cnn.com/2022/02/18/china/china-winter-olympics-russia-intl-hnk-mic/index.html",
+                "4": "https://www.cnn.com/2022/03/17/business/china-russia-sanctions-friction-intl-hnk/index.html",
+                "5": "https://www.cnn.com/2022/02/25/china/china-reaction-ukraine-russia-intl-hnk-mic/index.html"
+            }
+        },
+        {
+            "question": "Did the US send troops to Ukraine?",
+            "answer": "No, the US did not send troops to Ukraine. The US deployed thousands of troops throughout Europe, including Poland, Germany, and Romania, to bolster NATO countries in Eastern Europe and reassure allies in the region [1,2]. However, these troops are not there to engage in a conflict with Russia in Ukraine [1].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/02/27/politics/us-troops-ukraine-russia-what-matters/index.html",
+                "2": "https://www.cnn.com/2022/02/02/politics/president-authority-deploy-us-troops-explainer/index.html"
+            }
+        },
+        {
+            "question": "Why are companies are moving out of Russia?",
+            "answer": "Companies are moving out of Russia in response to its invasion of Ukraine, which has led to an exodus affecting various sectors of the economy [1]. Major companies such as Ford, General Motors, Exxon, BP, Shell, Equinor, TotalEnergies, Hilton, Marriott, 3M, Dow, Citigroup, Goldman Sachs, JPMorgan, and Deutsche Bank have either suspended operations, halted exports, shut down offices, or announced their intent to exit their Russian businesses [1,2,3]. The situation in Ukraine and the resulting sanctions have created concerns and challenges for companies operating in Russia, leading to their decision to scale back or leave the country [4].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/03/02/business/companies-pulling-back-russia-ukraine-war-intl-hnk/index.html",
+                "2": "https://www.cnn.com/2022/03/02/business/oil-prices-natural-gas-russia/index.html",
+                "3": "https://www.cnn.com/2022/03/14/investing/citi-russia/index.html",
+                "4": "https://www.cnn.com/2022/03/12/europe/western-brands-russia-sanctions-impact-intl/index.html"
+            }
+        },
+        {
+            "question": "Who's nominated for best supporting actress?",
+            "answer": "The nominees for Best Supporting Actress are Jessie Buckley, Ariana DeBose, Judi Dench, Kirsten Dunst, and Aunjanue Ellis [1].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/02/08/entertainment/oscar-nominations-list-2022/index.html"
+            }
+        },
+        {
+            "question": "Who is Ketanji Jackson?",
+            "answer": "Ketanji Brown Jackson is a judge who has appeared before the Senate multiple times for confirmation proceedings. She comes from a family with a background in public service, including a brother who is a police officer and military member. She has served on the DC US Circuit Court of Appeals and has been nominated by President Joe Biden for the Supreme Court [1,2,3].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/02/25/politics/supreme-court-ketanji-brown-jackson/index.html",
+                "2": "https://www.cnn.com/2022/03/21/politics/what-to-expect-ketanji-brown-jackson-confirmation-hearings/index.html",
+                "3": "https://www.cnn.com/2022/02/25/politics/who-is-ketanji-brown-jackson-biden-scotus-nominee/index.html"
+            }
+        },
+        {
+            "question": "What's the controversy surrounding Eileen Gu",
+            "answer": "The controversy surrounding Eileen Gu is her failure to sing China's national anthem during the medal ceremony at the Olympics [1].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/02/11/china/eileen-gu-zhu-yi-nathan-chen-comparison-intl-hnk-dst/index.html"
+            }
+        },
+        {
+            "question": "Who is Eileen Gu?",
+            "answer": "Eileen Gu is a freestyle skier who was born and raised in California. She has become a popular figure in China due to her skiing skills, fluent Mandarin, and familiarity with Chinese culture. Gu has a large following on social media and is admired for her fashion choices and \"biracial beauty\" [1,2].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/02/06/sport/us-born-figure-skater-beverly-zhu-yi-china-olympic-intl-hnk/index.html",
+                "2": "https://www.cnn.com/2022/02/11/china/eileen-gu-zhu-yi-nathan-chen-comparison-intl-hnk-dst/index.html"
+            }
+        },
+        {
+            "question": "What images did James Webb Telescope captured?",
+            "answer": "The James Webb Space Telescope captured images of 18 points of starlight from a solitary star in the Ursa Major constellation [1]. These images were taken to ensure that the telescope's mirrors are perfectly aligned before it focuses on exoplanets and distant galaxies [1].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/02/11/world/james-webb-space-telescope-selfie-images-scn/index.html"
+            }
+        }
+    ],
+    "temperature_0.9": [
+        {
+            "question": "Can pig hearts be used for human transplants?",
+            "answer": "Yes, pig hearts can be used for human transplants as shown by the recent successful transplant surgery on a 57-year-old Maryland man [1]. The surgery involved a genetically modified pig heart, which was the only available option for the patient [1]. The use of pig organs for human transplants has been tested before, such as the transplant of a pig kidney in a brain-dead patient [1]. However, it is important to note that the success and long-term viability of these transplants are still uncertain [1].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/01/10/health/genetically-modified-pig-heart-transplant/index.html"
+            }
+        },
+        {
+            "question": "Why did the man receive a pig heart transplant?",
+            "answer": "The man received a pig heart transplant because it was the only currently available option for him due to his terminal heart disease and ineligibility for conventional heart transplant or artificial heart pump [1].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/01/10/health/genetically-modified-pig-heart-transplant/index.html"
+            }
+        },
+        {
+            "question": "Why is Elizabeth Holmes on trial?",
+            "answer": "Elizabeth Holmes is on trial for her involvement in a large-scale investor fraud, as she was found guilty on four charges of defrauding investors [1]. She was not found guilty on charges pertaining to defrauding patients [1].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/01/03/tech/elizabeth-holmes-verdict/index.html"
+            }
+        },
+        {
+            "question": "Is Elizabeth Holmes guilty?",
+            "answer": "Yes, Elizabeth Holmes is guilty. She was found guilty on four charges of defrauding investors, including conspiracy to defraud investors and three wire fraud counts tied to specific investors. However, she was found not guilty on three charges concerning defrauding patients and one charge of conspiracy to defraud patients [1,2].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/01/03/tech/elizabeth-holmes-verdict/index.html",
+                "2": "https://www.cnn.com/2022/01/04/tech/elizabeth-holmes-rise-and-fall/index.html"
+            }
+        },
+        {
+            "question": "What was the Supreme Court's ruling on the Biden administration's vaccine mandate for large employers?",
+            "answer": "The Supreme Court blocked the Biden administration's vaccine mandate for large employers, freezing a lower court opinion and preventing the mandate from going into effect nationwide [1].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/01/13/business/us-supreme-court-ruling-vaccine-mandate/index.html"
+            }
+        },
+        {
+            "question": "What companies took action against Russia?",
+            "answer": "Companies that took action against Russia include BASF, BP, Coca-Cola HBC, Ford, General Motors, McDonald's, PepsiCo, and Starbucks [1,2,3].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/02/25/investing/business-russia-sanctions/index.html",
+                "2": "https://www.cnn.com/2022/03/02/business/companies-pulling-back-russia-ukraine-war-intl-hnk/index.html",
+                "3": "https://www.cnn.com/2022/03/08/business/mcdonalds-pepsi-coke-russia/index.html"
+            }
+        },
+        {
+            "question": "What is the US's stance on the Ukraine crisis?",
+            "answer": "The US's stance on the Ukraine crisis is to be wary of intervention and to not seek confrontation. Only 26% of Americans believe the US should play a major role, while 52% believe it should play a minor role and 20% believe it should play no role at all [1,2].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/02/27/politics/us-troops-ukraine-russia-what-matters/index.html",
+                "2": "https://www.cnn.com/2022/02/24/politics/us-troops-ukraine-russia-nato/index.html"
+            }
+        },
+        {
+            "question": "What is China's stance on the Ukraine crisis?",
+            "answer": "China's stance on the Ukraine crisis is that it has refused to condemn the Russian attack or call it an invasion, and instead expressed understanding for Russia's \"legitimate security concerns.\" China has emphasized its principle of respecting national sovereignty and territorial integrity [1,2,3].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/03/07/asia/china-india-ukraine-reaction-intl-hnk-dst/index.html",
+                "2": "https://www.cnn.com/2022/02/23/china/taiwan-ukraine-parallels-china-russia-intl-hnk-mic/index.html",
+                "3": "https://www.cnn.com/2022/02/25/china/china-reaction-ukraine-russia-intl-hnk-mic/index.html"
+            }
+        },
+        {
+            "question": "Did the US send troops to Ukraine?",
+            "answer": "No, the US did not send troops to Ukraine [1].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/02/27/politics/us-troops-ukraine-russia-what-matters/index.html"
+            }
+        },
+        {
+            "question": "Why are companies are moving out of Russia?",
+            "answer": "Companies are moving out of Russia in response to its invasion of Ukraine, with concerns about the situation in Ukraine and the impact of the invasion on business operations [1,2].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/03/02/business/companies-pulling-back-russia-ukraine-war-intl-hnk/index.html",
+                "2": "https://www.cnn.com/2022/03/02/business/oil-prices-natural-gas-russia/index.html"
+            }
+        },
+        {
+            "question": "Who's nominated for best supporting actress?",
+            "answer": "The nominees for best supporting actress include Jessie Buckley, Ariana DeBose, Judi Dench, Kirsten Dunst, and Aunjanue Ellis [1].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/02/08/entertainment/oscar-nominations-list-2022/index.html"
+            }
+        },
+        {
+            "question": "Who is Ketanji Jackson?",
+            "answer": "Ketanji Brown Jackson is a judge who has appeared before the Senate multiple times for confirmation proceedings. She is currently a judge on the DC US Circuit Court of Appeals and has been nominated by President Joe Biden to be the first Black woman to sit on the Supreme Court. She comes from a working-class family, has a strong education background, and has a relative who is a police officer and military officer. Her qualifications and character have been praised by lawmakers [1,2].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/03/21/politics/what-to-expect-ketanji-brown-jackson-confirmation-hearings/index.html",
+                "2": "https://www.cnn.com/2022/02/25/politics/who-is-ketanji-brown-jackson-biden-scotus-nominee/index.html"
+            }
+        },
+        {
+            "question": "What's the controversy surrounding Eileen Gu",
+            "answer": "The controversy surrounding Eileen Gu is her failure to sing China's national anthem during the medal ceremony at the Olympics, which has led to increased public scrutiny [1].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/02/11/china/eileen-gu-zhu-yi-nathan-chen-comparison-intl-hnk-dst/index.html"
+            }
+        },
+        {
+            "question": "Who is Eileen Gu?",
+            "answer": "Eileen Gu is an 18-year-old freestyle skier who was born in the United States to an American father and Chinese mother. She has gained immense popularity in China and is considered a national darling. Gu is known for her fluency in Mandarin, her success as a world champion skier, and her representation of various brands. [1,2,3]",
+            "reference": {
+                "1": "https://www.cnn.com/2022/02/06/sport/us-born-figure-skater-beverly-zhu-yi-china-olympic-intl-hnk/index.html",
+                "2": "https://www.cnn.com/2022/02/11/china/eileen-gu-zhu-yi-nathan-chen-comparison-intl-hnk-dst/index.html",
+                "3": "https://www.cnn.com/2022/02/07/china/eileen-gu-olympics-foreign-athletes-mic-intl-hnk/index.html"
+            }
+        },
+        {
+            "question": "What images did James Webb Telescope captured?",
+            "answer": "The James Webb Space Telescope captured images of starlight from a bright solitary star in the Ursa Major constellation, creating a mosaic of 18 points of starlight [1].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/02/11/world/james-webb-space-telescope-selfie-images-scn/index.html"
+            }
+        }
+    ],
+    "temperature_0.1": [
+        {
+            "question": "Can pig hearts be used for human transplants?",
+            "answer": "Yes, pig hearts can be used for human transplants. A 57-year-old man in Maryland received a genetically modified pig heart in a transplant surgery [1]. The surgery was authorized by the FDA and the patient's doctors will monitor him to see if the transplant is successful [1]. Pig heart valves have also been transplanted into humans in the past [1].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/01/10/health/genetically-modified-pig-heart-transplant/index.html"
+            }
+        },
+        {
+            "question": "Why did the man receive a pig heart transplant?",
+            "answer": "The man received a pig heart transplant because it was the only currently available option for him due to his terminal heart disease and ineligibility for a conventional heart transplant or an artificial heart pump [1].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/01/10/health/genetically-modified-pig-heart-transplant/index.html"
+            }
+        },
+        {
+            "question": "Why is Elizabeth Holmes on trial?",
+            "answer": "Elizabeth Holmes is on trial for charges of defrauding investors and patients. She was found guilty on four charges of defrauding investors, including one count of conspiracy to defraud investors and three wire fraud counts tied to specific investors. However, she was found not guilty on charges concerning defrauding patients and one charge of conspiracy to defraud patients [1].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/01/03/tech/elizabeth-holmes-verdict/index.html"
+            }
+        },
+        {
+            "question": "Is Elizabeth Holmes guilty?",
+            "answer": "Yes, Elizabeth Holmes is guilty. She was found guilty on four charges of defrauding investors [1].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/01/03/tech/elizabeth-holmes-verdict/index.html"
+            }
+        },
+        {
+            "question": "What was the Supreme Court's ruling on the Biden administration's vaccine mandate for large employers?",
+            "answer": "The Supreme Court blocked the Biden administration's vaccine mandate for large employers, freezing a lower court opinion that allowed the mandate to go into effect nationwide [1].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/01/13/business/us-supreme-court-ruling-vaccine-mandate/index.html"
+            }
+        },
+        {
+            "question": "What companies took action against Russia?",
+            "answer": "McDonald's, Starbucks, Coca-Cola, and PepsiCo took action against Russia by shutting down their restaurants and suspending their operations in response to Russia's invasion of Ukraine [1]. Ford and General Motors also suspended their operations in Russia [2].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/03/08/business/mcdonalds-pepsi-coke-russia/index.html",
+                "2": "https://www.cnn.com/2022/03/02/business/companies-pulling-back-russia-ukraine-war-intl-hnk/index.html"
+            }
+        },
+        {
+            "question": "What is the US's stance on the Ukraine crisis?",
+            "answer": "The US's stance on the Ukraine crisis is that it is wary of intervention and believes it should play a minor or no role in the situation [1,2]. However, the US has not taken any options off the table, including targeting the Russian energy sector with sanctions [1].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/02/27/politics/us-troops-ukraine-russia-what-matters/index.html",
+                "2": "https://www.cnn.com/2022/02/24/politics/us-troops-ukraine-russia-nato/index.html"
+            }
+        },
+        {
+            "question": "What is China's stance on the Ukraine crisis?",
+            "answer": "China's stance on the Ukraine crisis is that it has refused to condemn the Russian attack or call it an \"invasion\" and has expressed understanding for Russia's \"legitimate security concerns.\" China wants a diplomatic resolution to the crisis and supports Russia and Ukraine resolving their issue through negotiation [1,2,3,4].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/03/07/asia/china-india-ukraine-reaction-intl-hnk-dst/index.html",
+                "2": "https://www.cnn.com/2022/02/23/china/taiwan-ukraine-parallels-china-russia-intl-hnk-mic/index.html",
+                "3": "https://www.cnn.com/2022/02/18/china/china-winter-olympics-russia-intl-hnk-mic/index.html",
+                "4": "https://www.cnn.com/2022/02/25/china/china-reaction-ukraine-russia-intl-hnk-mic/index.html"
+            }
+        },
+        {
+            "question": "Did the US send troops to Ukraine?",
+            "answer": "No, the US did not send troops to Ukraine [1,2].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/02/27/politics/us-troops-ukraine-russia-what-matters/index.html",
+                "2": "https://www.cnn.com/2022/02/02/politics/president-authority-deploy-us-troops-explainer/index.html"
+            }
+        },
+        {
+            "question": "Why are companies are moving out of Russia?",
+            "answer": "Companies are moving out of Russia in response to its invasion of Ukraine, which has led to an exodus of major corporations from various sectors such as autos, finance, retail, entertainment, and fast food [1]. The reasons for their departure include concerns about the situation in Ukraine [1], the impact of sanctions [2], and the need to reduce operations and exposure in Russia [3]. The decision to leave Russia has been made by companies like Ford, General Motors, Exxon, BP, Shell, Equinor, TotalEnergies, Hilton, Marriott, 3M, Dow, Citigroup, Goldman Sachs, JPMorgan, and Deutsche Bank [1,4,3].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/03/02/business/companies-pulling-back-russia-ukraine-war-intl-hnk/index.html",
+                "2": "https://www.cnn.com/2022/03/12/europe/western-brands-russia-sanctions-impact-intl/index.html",
+                "3": "https://www.cnn.com/2022/03/14/investing/citi-russia/index.html",
+                "4": "https://www.cnn.com/2022/03/02/business/oil-prices-natural-gas-russia/index.html"
+            }
+        },
+        {
+            "question": "Who's nominated for best supporting actress?",
+            "answer": "The nominees for Best Supporting Actress are Caitr\u00edona Balfe, Cate Blanchett, Ariana DeBose, Kirsten Dunst, and Ruth Negga [1].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/01/12/entertainment/sag-award-nominations-2022/index.html"
+            }
+        },
+        {
+            "question": "Who is Ketanji Jackson?",
+            "answer": "Ketanji Brown Jackson is a judge who has appeared before the Senate multiple times for confirmation proceedings. She is currently a judge on the DC US Circuit Court of Appeals and has been nominated by President Joe Biden for a seat on the Supreme Court [1]. She comes from a working-class family and has a background in public service and law [2,3]. She is also the first Black woman to be nominated for the Supreme Court [1].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/03/21/politics/what-to-expect-ketanji-brown-jackson-confirmation-hearings/index.html",
+                "2": "https://www.cnn.com/2022/02/25/politics/supreme-court-ketanji-brown-jackson/index.html",
+                "3": "https://www.cnn.com/2022/02/25/politics/who-is-ketanji-brown-jackson-biden-scotus-nominee/index.html"
+            }
+        },
+        {
+            "question": "What's the controversy surrounding Eileen Gu",
+            "answer": "The controversy surrounding Eileen Gu is her failure to sing China's national anthem during the medal ceremony at the Olympics [1].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/02/11/china/eileen-gu-zhu-yi-nathan-chen-comparison-intl-hnk-dst/index.html"
+            }
+        },
+        {
+            "question": "Who is Eileen Gu?",
+            "answer": "Eileen Gu is an 18-year-old freestyle skier who was born and raised in California. She has become a popular figure in China due to her fluency in Mandarin and her familiarity with Chinese culture. Gu has gained fame as an influencer and is admired for her fashion choices and \"biracial beauty\" [1,2].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/02/06/sport/us-born-figure-skater-beverly-zhu-yi-china-olympic-intl-hnk/index.html",
+                "2": "https://www.cnn.com/2022/02/11/china/eileen-gu-zhu-yi-nathan-chen-comparison-intl-hnk-dst/index.html"
+            }
+        },
+        {
+            "question": "What images did James Webb Telescope captured?",
+            "answer": "The James Webb Space Telescope captured images of 18 points of starlight reflected by its mirror segments, as well as a mosaic of 18 dots representing a single star. These images were taken during the telescope's testing phase [1].",
+            "reference": {
+                "1": "https://www.cnn.com/2022/02/11/world/james-webb-space-telescope-selfie-images-scn/index.html"
+            }
+        }
+    ]
+}

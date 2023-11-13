@@ -5,3 +5,4 @@ opensearch-py>=2.3.2
 python-dotenv>=1.0.0
 sentence-transformers>=2.2.2
 torch>=2.1.0
+openai>=1.2.3

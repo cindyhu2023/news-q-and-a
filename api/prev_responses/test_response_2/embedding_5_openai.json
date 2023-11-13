@@ -1,0 +1,170 @@
+[
+    {
+        "id": 0,
+        "question": "What's the damage of Colorado wildfire?",
+        "answer": "At least three people are missing and feared dead after the Colorado wildfire, and 991 homes in Louisville, Superior and unincorporated portions of Boulder County have been lost [3]. 550 homes in Louisville, 332 in Superior and 106 in unincorporated areas were destroyed, with 127 structures damaged [3]. The Red Cross and Society for the Prevention of Cruelty to Animals are providing assistance [2]. Answering is not possible given the available information.",
+        "reference": {
+            "1": "https://www.cnn.com/2022/02/23/world/wildfire-increase-climate-change-unep-report/index.html",
+            "2": "https://www.cnn.com/2022/01/22/weather/california-highway-1-palo-colorado-fire/index.html",
+            "3": "https://www.cnn.com/2022/01/01/us/colorado-wildfires-saturday/index.html",
+            "4": "https://www.cnn.com/2022/01/01/us/colorado-wildfires-saturday/index.html",
+            "5": "https://www.cnn.com/2022/01/22/weather/california-highway-1-palo-colorado-fire/index.html"
+        }
+    },
+    {
+        "id": 1,
+        "question": "Why is Elizabeth Holmes on trial?",
+        "answer": "Elizabeth Holmes is on trial for defrauding investors [1,4] and concealing the use of third-party machines for patient blood tests [2,3]. She is facing up to 20 years in prison and a fine of $250,000 plus restitution for each count [4].",
+        "reference": {
+            "1": "https://www.cnn.com/2022/01/03/tech/elizabeth-holmes-verdict/index.html",
+            "2": "https://www.cnn.com/2022/01/04/tech/elizabeth-holmes-rise-and-fall/index.html",
+            "3": "https://www.cnn.com/2022/01/03/tech/elizabeth-holmes-verdict/index.html",
+            "4": "https://www.cnn.com/2022/01/03/tech/elizabeth-holmes-verdict/index.html",
+            "5": "https://www.cnn.com/2022/01/03/tech/elizabeth-holmes-verdict/index.html"
+        }
+    },
+    {
+        "id": 2,
+        "question": "Is Elizabeth Holmes guilty?",
+        "answer": "Yes, Elizabeth Holmes was found guilty on four of 11 federal charges for defrauding investors [1,3].",
+        "reference": {
+            "1": "https://www.cnn.com/2022/01/03/tech/elizabeth-holmes-verdict/index.html",
+            "2": "https://www.cnn.com/2022/01/04/tech/elizabeth-holmes-rise-and-fall/index.html",
+            "3": "https://www.cnn.com/2022/01/03/tech/elizabeth-holmes-verdict/index.html",
+            "4": "https://www.cnn.com/2022/03/14/tech/theranos-elizabeth-holmes-sunny-balwani/index.html",
+            "5": "https://www.cnn.com/2022/01/03/tech/elizabeth-holmes-verdict/index.html"
+        }
+    },
+    {
+        "id": 3,
+        "question": "What's the number of COVID-19 cases in the US?",
+        "answer": "Answering is not possible given the available information.",
+        "reference": {
+            "1": "https://www.cnn.com/2022/03/01/health/140-million-covid-19-infections/index.html",
+            "2": "https://www.cnn.com/2022/03/16/world/coronavirus-newsletter-intl-16-03-22/index.html",
+            "3": "https://www.cnn.com/2022/02/16/politics/trump-mark-finchem-arizona-secetary-state-kfile/index.html",
+            "4": "https://www.cnn.com/2022/01/01/australia/australia-starts-2022-record-covid-cases-intl-hnk/index.html",
+            "5": "https://www.cnn.com/2022/03/15/health/covid-rising-uk-us/index.html"
+        }
+    },
+    {
+        "id": 4,
+        "question": "What is the new COVID-19 variant?",
+        "answer": "The new COVID-19 variant is BA.2, which is classified as Omicron. It is transmissible and may cause milder symptoms in vaccinated and boosted people, according to documents [1,2,5].",
+        "reference": {
+            "1": "https://www.cnn.com/2022/02/03/health/stealth-omicron-variant-wen-wellness/index.html",
+            "2": "https://www.cnn.com/2022/02/23/world/coronavirus-newsletter-intl-02-23-22/index.html",
+            "3": "https://www.cnn.com/2022/02/23/health/cdc-covid-metrics/index.html",
+            "4": "https://www.cnn.com/2022/02/03/health/stealth-omicron-variant-wen-wellness/index.html",
+            "5": "https://www.cnn.com/2022/01/11/opinions/covid-let-it-rip-sepkowitz/index.html"
+        }
+    },
+    {
+        "id": 5,
+        "question": "What are the economic challenges facing Britain, and how is the cost of living crisis impacting its citizens?",
+        "answer": "The UK is experiencing five-year high inflation, resulting in product shortages and rising prices for essential goods like milk and bread. Wages are not keeping pace with these rising costs, resulting in a 1% drop in average worker pay in the three months to January [2]. The government is providing \u00a312 billion ($16 billion) in support to help households, but critics say the measures are inadequate [3]. High energy prices, a payroll tax, and a 54% rise in the energy price",
+        "reference": {
+            "1": "https://www.cnn.com/2022/03/15/business/britain-cost-of-living/index.html",
+            "2": "https://www.cnn.com/2022/03/15/business/britain-cost-of-living/index.html",
+            "3": "https://www.cnn.com/2022/03/15/business/britain-cost-of-living/index.html",
+            "4": "https://www.cnn.com/2022/03/15/business/britain-cost-of-living/index.html",
+            "5": "https://www.cnn.com/2022/03/15/business/britain-cost-of-living/index.html"
+        }
+    },
+    {
+        "id": 6,
+        "question": "How are major oil price fluctuations affecting gas prices, and what are the potential consequences for consumers?What is the US's stance on the Ukraine crisis?",
+        "answer": "Gas prices have risen significantly since the start of the Russian invasion of Ukraine, with US gas prices climbing more than 60 cents in a week to record highs[1]. The US does not rely heavily on Russian oil, making up 8% of total US energy imports last year[3], and major oil price fluctuations are not expected to have catastrophic consequences for consumers. However, the US government is considering sanctions against Russia, which could cause further price increases[4,5]. To mitigate this, President",
+        "reference": {
+            "1": "https://www.cnn.com/2022/03/05/politics/ukraine-russia-us-gas-prices-what-matters/index.html",
+            "2": "https://www.cnn.com/2022/03/14/energy/oil-prices/index.html",
+            "3": "https://www.cnn.com/2022/03/09/business/oil-price-freakout-romans/index.html",
+            "4": "https://www.cnn.com/2022/03/05/politics/ukraine-russia-us-gas-prices-what-matters/index.html",
+            "5": "https://www.cnn.com/2022/03/02/business/oil-prices-natural-gas-russia/index.html"
+        }
+    },
+    {
+        "id": 7,
+        "question": "What is China's stance on the Ukraine crisis?",
+        "answer": "China has expressed diplomatic support for its ally Russia, and has urged parties involved in the Ukraine crisis to return to the Minsk agreements [1]. Xi Jinping and Vladimir Putin agreed to deepen their cooperation, and issued a joint statement opposing further enlargement of NATO [2]. In a phone call with Emmanuel Macron, Xi called for a diplomatic resolution to the crisis and for all parties to make use of the Normandy format [3]. China has not rushed to help Russia after its economy was slammed by sanctions",
+        "reference": {
+            "1": "https://www.cnn.com/2022/02/22/china/china-ukraine-russia-reaction-united-nations-intl-hnk/index.html",
+            "2": "https://www.cnn.com/2022/02/05/economy/russia-china-ukraine-economy-intl-hnk/index.html",
+            "3": "https://www.cnn.com/2022/02/18/china/china-winter-olympics-russia-intl-hnk-mic/index.html",
+            "4": "https://www.cnn.com/2022/03/03/economy/china-cant-help-russia-sanctions-fallout-intl-hnk/index.html",
+            "5": "https://www.cnn.com/2022/03/16/china/xi-2022-challenges-covid-ukraine-russia-intl-hnk/index.html"
+        }
+    },
+    {
+        "id": 8,
+        "question": "Did the US send troops to Ukraine?",
+        "answer": "No, the US did not send troops to Ukraine. US Defense Secretary Lloyd Austin deployed an additional 7,000 US troops to Europe [1], including Estonia, Latvia, Lithuania, Poland and Romania [1]. The US placed 8,500 troops on heightened alert in case a NATO Response Force is called up [5], but the US and NATO have tens of thousands of other troops already in Europe [5] to bolster NATO countries in Eastern Europe in the face of Moscow's aggression [1].",
+        "reference": {
+            "1": "https://www.cnn.com/2022/02/24/politics/us-military-ukraine-russia/index.html",
+            "2": "https://www.cnn.com/2022/02/24/europe/ukraine-russia-invasion-friday-intl-hnk/index.html",
+            "3": "https://www.cnn.com/2022/02/12/politics/us-embassy-ukraine-evacation/index.html",
+            "4": "https://www.cnn.com/2022/03/05/europe/ukraine-kyiv-american-stays-defend-invs/index.html",
+            "5": "https://www.cnn.com/2022/02/02/politics/us-troops-europe-russia/index.html"
+        }
+    },
+    {
+        "id": 9,
+        "question": "What companies are moving out of Russia and why?",
+        "answer": "Major companies like Ford (F), General Motors (GM), Toyota (TM), KPMG, PricewaterhouseCoopers (PwC), BP, Equinor, Exxon, BASF, Coca-Cola HBC, Danone, Engie, Metro, Nestle, Renault, Rolls-Royce, Safran, Shell, TotalEnergies, Uniper, ExxonMobil, McDonald's, Mondelez, Japan Tobacco, Marubeni, Mitsubishi, Rio",
+        "reference": {
+            "1": "https://www.cnn.com/2022/03/02/business/companies-pulling-back-russia-ukraine-war-intl-hnk/index.html",
+            "2": "https://www.cnn.com/2022/03/02/business/companies-pulling-back-russia-ukraine-war-intl-hnk/index.html",
+            "3": "https://www.cnn.com/2022/02/25/investing/business-russia-sanctions/index.html",
+            "4": "https://www.cnn.com/2022/03/02/business/companies-pulling-back-russia-ukraine-war-intl-hnk/index.html",
+            "5": "https://www.cnn.com/2022/03/09/media/russia-media-law-reliable-sources/index.html"
+        }
+    },
+    {
+        "id": 10,
+        "question": "Who is the first black woman in Supreme Court?",
+        "answer": "Ketanji Brown Jackson is the first Black woman to be nominated to the Supreme Court, announced by President Joe Biden at a White House ceremony on Friday [3]. She shared a birthday with the first Black woman to serve as a federal judge, the late Constance Baker Motley [5], who was appointed to a federal district court seat in 1966 by President Lyndon Johnson [5].",
+        "reference": {
+            "1": "https://www.cnn.com/2022/02/27/opinions/the-price-putin-will-pay-column-galant/index.html",
+            "2": "https://www.cnn.com/2022/02/25/politics/kentanji-brown-jackson-conservative-supreme-court/index.html",
+            "3": "https://www.cnn.com/2022/02/25/politics/supreme-court-ketanji-brown-jackson/index.html",
+            "4": "https://www.cnn.com/2022/01/30/politics/black-women-supreme-court-nominee/index.html",
+            "5": "https://www.cnn.com/2022/02/25/politics/kentanji-brown-jackson-conservative-supreme-court/index.html"
+        }
+    },
+    {
+        "id": 11,
+        "question": "Who is Ketanji Jackson?",
+        "answer": "Ketanji Brown Jackson is a Harvard Law graduate who grew up in Miami. She has served as a judge on DC's federal trial court for eight years, as well as vice-chaired the US Sentencing Commission between 2010 and 2014 [1,2]. Her parents were both public school teachers and her father later became chief counsel to the Miami-Dade County school board [1]. She is married to Patrick Jackson, a DC-based surgeon, and has two daughters [1",
+        "reference": {
+            "1": "https://www.cnn.com/2022/02/25/politics/who-is-ketanji-brown-jackson-biden-scotus-nominee/index.html",
+            "2": "https://www.cnn.com/2022/02/02/politics/ketanji-brown-jackson-profile/index.html",
+            "3": "https://www.cnn.com/2022/02/25/politics/supreme-court-ketanji-brown-jackson/index.html",
+            "4": "https://www.cnn.com/2022/03/21/politics/what-to-expect-ketanji-brown-jackson-confirmation-hearings/index.html",
+            "5": "https://www.cnn.com/2022/02/25/politics/who-is-ketanji-brown-jackson-biden-scotus-nominee/index.html"
+        }
+    },
+    {
+        "id": 12,
+        "question": "Who is Eileen Guo?",
+        "answer": "Eileen Guo is an American-born freestyle skier who switched to compete for China in 2015. She has embraced her dual identity, often saying \"When I'm in China, I'm Chinese. When I'm in the US, I'm American.\" [3,5] She has become China's unofficial face of the Winter Olympics, featuring heavily in state media coverage, advertisements, and has 1.9 million followers on Weibo. [2] She won a gold medal in",
+        "reference": {
+            "1": "https://www.cnn.com/2022/02/06/sport/us-born-figure-skater-beverly-zhu-yi-china-olympic-intl-hnk/index.html",
+            "2": "https://www.cnn.com/2022/02/18/sport/eileen-gu-halfpipe-gold-olympics-intl-hnk-spt/index.html",
+            "3": "https://www.cnn.com/2022/02/07/china/eileen-gu-olympics-foreign-athletes-mic-intl-hnk/index.html",
+            "4": "https://www.cnn.com/2022/02/11/china/eileen-gu-zhu-yi-nathan-chen-comparison-intl-hnk-dst/index.html",
+            "5": "https://www.cnn.com/2022/02/11/china/eileen-gu-zhu-yi-nathan-chen-comparison-intl-hnk-dst/index.html"
+        }
+    },
+    {
+        "id": 13,
+        "question": "What measures are the Chicago Teachers Union implementing to ensure the safety of in-person learning during the COVID-19 pandemic?",
+        "answer": "The Chicago Teachers Union and the city have agreed to provide KN95 masks for students and staff for the rest of the school year, weekly Covid-19 testing, and parameters for when a school could switch to remote teaching [1]. The agreement also includes contact tracing and incentives to increase the number of substitutes in the district [2]. The city is also working with the union to engage families to increase testing consents [2]. Finally, Chicago Public Schools reported that the last day students were in",
+        "reference": {
+            "1": "https://www.cnn.com/2022/01/12/us/chicago-students-return-to-school/index.html",
+            "2": "https://www.cnn.com/2022/01/12/us/chicago-students-return-to-school/index.html",
+            "3": "https://www.cnn.com/2022/01/12/us/chicago-students-return-to-school/index.html",
+            "4": "https://www.cnn.com/2022/01/08/us/chicago-schools-union-mayor/index.html",
+            "5": "https://www.cnn.com/2022/01/11/us/chicago-schools-union-mayor-deal-reached/index.html"
+        }
+    }
+]

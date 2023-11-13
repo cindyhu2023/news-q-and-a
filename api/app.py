@@ -9,6 +9,8 @@ from flask_mysqldb import MySQL
 import datetime
 import pytz
 import json
+from util.utils import remove_duplicate_references 
+from openai import OpenAI
 
 load_dotenv()
 
@@ -49,11 +51,12 @@ retriever = EmbeddingRetriever(
 )
 
 def query(user_query, retriever):
-    openai_api_key = os.getenv("OPEN_AI_KEY")
+    client = OpenAI(
+        api_key=os.getenv("OPEN_AI_KEY")
+    )
     prompt_template = '''
         Create a concise and informative answer (no more than 50 words) for a given question 
         based solely on the given documents. You must only use information from the given documents. 
-        Use an unbiased and journalistic tone. Do not repeat text.
         Cite the documents using numeric references in the text. 
         If multiple documents contain the answer, cite those documents like [1,2] at the end of the sentence in the answer. 
         If the documents do not contain the answer to the question, say that 'answering is not possible given the available information.'
@@ -62,24 +65,26 @@ def query(user_query, retriever):
 
         Question: {query}; Answer:
     '''
-    # question_answering_with_references = PromptTemplate("deepset/question-answering-with-references", output_parser=AnswerParser(reference_pattern=r"Document\[(\d+)\]"))
-    question_answering_with_references = PromptTemplate(prompt=prompt_template, output_parser=AnswerParser(reference_pattern=r"Document\[(\d+)\]"))
 
-    # prompt_open_ai = PromptModel(model_name_or_path="text-davinci-003", api_key=openai_api_key)
-    prompt_open_ai = PromptModel(model_name_or_path="gpt-3.5-turbo", api_key=openai_api_key)
-    pn_open_ai = PromptNode(prompt_open_ai, default_prompt_template=question_answering_with_references)
+    documents = retriever.retrieve(query=user_query)
+    prompt_template_obj = PromptTemplate(prompt=prompt_template)
+    filled_prompt = list(prompt_template_obj.fill(documents=documents, query=user_query))[0]
+    chat_completion = client.chat.completions.create(
+        messages=[
+            {
+                "role": "user",
+                "content": filled_prompt,
+            }
+        ],
+        model="gpt-3.5-turbo",
+        max_tokens=1024,
+    )
 
-    querying_pipeline = Pipeline()
-    querying_pipeline.add_node(component=retriever, name="Retriever", inputs=["Query"])
-    # querying_pipeline.add_node(component=reader, name="Reader", inputs=["Retriever"])
-    querying_pipeline.add_node(component=pn_open_ai, name="prompt_node", inputs=["Retriever"])
-    output = querying_pipeline.run(query=user_query, params={"prompt_node": {"invocation_context": None}}, debug=True)
-    # print(output)
-    print(output["answers"][0].meta["prompt"])
-    answer = output["answers"][0].answer
+    answer = chat_completion.choices[0].message.content
     reference = {}
-    for idx, doc in enumerate(output["documents"]):
+    for idx, doc in enumerate(documents):
         reference[idx+1] = doc.meta["URL"]
+    answer, reference = remove_duplicate_references(answer, reference)
 
     return answer, reference
 
@@ -94,7 +99,6 @@ def ask_question():
             'question': question,
             'answer': answer,
             'reference': reference,
-            'endpoint': os.getenv("RDS_ENDPOINT")
         }
 
         # log to database
@@ -110,6 +114,29 @@ def ask_question():
     else:
         return jsonify({'error': 'Question not provided.'}), 400  # Return error as JSON
 
+@app.route('/log', methods=['POST'])
+def log_response():
+    body = request.get_json()
+    print(body)
+    session = body.get('sessionId')
+    responses = body.get('data')
+    current_time_ct = datetime.datetime.now(pytz.timezone('US/Central'))
+    current_time_string = current_time_ct.strftime('%Y-%m-%d %H:%M:%S %Z')
+    if session and responses:
+        for i in ['0','1','2']:
+            response = responses[i]
+            question = response.get('question')
+            answer = response.get('answer')
+            comment = response.get('reason')
+
+            cur = mysql.connection.cursor()
+            cur.execute("INSERT INTO sampleResponses (timestamp, sessionId, question, answer, comment) VALUES(%s, %s, %s, %s, %s)", (current_time_string, session, question, answer, comment))
+            mysql.connection.commit()
+            cur.close()
+
+        return jsonify({'msg': 'Logged response.'}), 200 
+    else:
+        return jsonify({'msg': 'Error!'}), 400  # Return error as JSON
     
 # Running app
 # if __name__ == '__main__':

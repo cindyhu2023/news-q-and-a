@@ -6,3 +6,4 @@ python-dotenv==1.0.0
 Flask-MySQLdb==2.0.0
 sentence-transformers==2.2.2
 wheel==0.38.4
+openai>=1.2.3
