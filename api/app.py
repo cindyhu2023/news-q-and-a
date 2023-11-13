@@ -9,7 +9,7 @@ from flask_mysqldb import MySQL
 import datetime
 import pytz
 import json
-from util.utils import remove_duplicate_references 
+from .util.utils import remove_duplicate_references 
 from openai import OpenAI
 
 load_dotenv()
