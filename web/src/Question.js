@@ -7,7 +7,6 @@ function Question() {
   const [response, setResponse] = useState("");
   const [question, setQuestion] = useState("");
   const [reference, setReference] = useState();
-  const [counter, setCounter] = useState(0);
   const [isWaiting, setIsWaiting] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -29,7 +28,6 @@ function Question() {
         const jsonResponse = await response.json();
         setResponse(jsonResponse.answer);
         setReference(jsonResponse.reference);
-        setCounter(counter + 1);
         setIsWaiting(false);
       } else {
         setIsWaiting(false);
@@ -44,9 +42,9 @@ function Question() {
 
   return (
     <div>
-      <h2>Section 1/4 - Ask Questions about 2022 News</h2>
-      <p>Please submit at least 3 questions. <b>The data source is CNN news from January 2022 to March 2022</b>, so please only ask about news that happen in between January 2022 to March 2022.</p>
-      <p>If you don't remember what happened during that time, <a href="https://docs.google.com/document/d/1mZZ0QkbD1SOg9jsZvd73Ns-2rWq-M5LK82cekj4NTrg/edit?usp=sharing" target="_blank">check this doc!</a></p>
+      <h2>Ask anything</h2>
+      <p>Note: This app is a prototype. <b>The data source is CNN news from January 2022 to March 2022.</b> If your question is about news that happened outside of that time frame, you may not be able to get an answer.</p>
+      <p>Here is <a href="https://docs.google.com/document/d/1mZZ0QkbD1SOg9jsZvd73Ns-2rWq-M5LK82cekj4NTrg/edit?usp=sharing" target="_blank">the news highlight from January 2022 to March 2022</a>!</p>
       
       <Box
         component="form"
@@ -67,8 +65,6 @@ function Question() {
       <Button variant="contained" onClick={handleSubmit} size="large" style={{marginBottom: "20px"}}>
         Submit
       </Button>
-      { counter >= 3 && <h2>Thanks! <a href="/sample_response">Please click here to continue to next section.</a></h2>}
-      <p>{`question count: ${counter}`}</p>
       {question && (
         <div>
           <h3>Question: </h3>

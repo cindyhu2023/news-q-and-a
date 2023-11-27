@@ -6,9 +6,6 @@ from haystack.nodes import PromptModel, PromptNode, PromptTemplate, AnswerParser
 import os
 from dotenv import load_dotenv
 from flask_mysqldb import MySQL
-import datetime
-import pytz
-import json
 from openai import OpenAI
 
 load_dotenv()
@@ -100,41 +97,9 @@ def ask_question():
             'reference': reference,
         }
 
-        # log to database
-        current_time_ct = datetime.datetime.now(pytz.timezone('US/Central'))
-        current_time_string = current_time_ct.strftime('%Y-%m-%d %H:%M:%S %Z')
-
-        cur = mysql.connection.cursor()
-        cur.execute("INSERT INTO qaRecord (question, answer, reference, timestamp) VALUES(%s, %s, %s, %s)", (question, answer, json.dumps(reference), current_time_string))
-        mysql.connection.commit()
-        cur.close()
-
         return jsonify(response_data) 
     else:
         return jsonify({'error': 'Question not provided.'}), 400  # Return error as JSON
-
-@app.route('/log', methods=['POST'])
-def log_response():
-    body = request.get_json()
-    session = body.get('sessionId')
-    responses = body.get('data')
-    current_time_ct = datetime.datetime.now(pytz.timezone('US/Central'))
-    current_time_string = current_time_ct.strftime('%Y-%m-%d %H:%M:%S %Z')
-    if session and responses:
-        for i in ['0','1','2']:
-            response = responses[i]
-            question = response.get('question')
-            answer = response.get('answer')
-            comment = response.get('reason')
-
-            cur = mysql.connection.cursor()
-            cur.execute("INSERT INTO sampleResponses (timestamp, sessionId, question, answer, comment) VALUES(%s, %s, %s, %s, %s)", (current_time_string, session, question, answer, comment))
-            mysql.connection.commit()
-            cur.close()
-
-        return jsonify({'msg': 'Logged response.'}), 200 
-    else:
-        return jsonify({'msg': 'Error!'}), 400  # Return error as JSON
     
 # Running app
 # if __name__ == '__main__':
