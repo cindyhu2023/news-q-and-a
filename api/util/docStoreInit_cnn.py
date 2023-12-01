@@ -1,15 +1,16 @@
 from haystack.document_stores import ElasticsearchDocumentStore, OpenSearchDocumentStore
-from haystack.nodes import TextConverter, PreProcessor, EmbeddingRetriever
+from haystack.nodes import PreProcessor, EmbeddingRetriever
 from haystack.schema import Document
 import os
-import re
 import pandas as pd
 
 from dotenv import load_dotenv
 
 load_dotenv()
 
+# chunking news articles and inserting into OpenSearch
 def initialize_document_store(document_store):
+    # initialize preprocessor to 200 words per chunk
     preprocessor = PreProcessor(
         clean_whitespace=True,
         clean_header_footer=True,
@@ -21,7 +22,6 @@ def initialize_document_store(document_store):
     )
     doc_dir = "cnn/CNN_Articles_2022.csv"
     document_count = 0
-    total_chunks = 0
     chunks = []
     print("=================WRITING DOCUMENTS=================")
     df = pd.read_csv(doc_dir)
@@ -29,20 +29,18 @@ def initialize_document_store(document_store):
         document_count += 1
         doc = Document(content=row['Article text'], meta={"URL": row['Url'], "Date published": row['Date published'], "Headline": row['Headline']})
         chunks += preprocessor.process([doc])
-        # print("chunk_count: ", len(chunks))
+
+        # write to OpenSearch in chunks of 50 news articles
         if document_count % 50 == 0:
             document_store.write_documents(chunks)
-            total_chunks += len(chunks)
             chunks = []
-            print("document_count: ", document_count)
     if len(chunks) > 0:
         document_store.write_documents(chunks)
-        total_chunks += len(chunks)
     print("=================DONE WRITING DOCUMENTS=================")
     print("total document_count: ", document_count)
-    print("total chunk_count: ", total_chunks)
     return document_store
 
+# update embeddings to allow for semantic search
 def update_embeddings(document_store):
     print("=================UPDATING EMBEDDINGS=================")
     retriever = EmbeddingRetriever(
@@ -56,6 +54,7 @@ def update_embeddings(document_store):
     return document_store
 
 
+# initialize document store for ElasticSearch or OpenSearch
 def run(search_type):
     if search_type == "elastic":
         document_store = ElasticsearchDocumentStore(
@@ -76,7 +75,6 @@ def run(search_type):
             embedding_dim=768
         )
         document_store = initialize_document_store(document_store)
-        input("Done initializing, press Enter to continue...")
         document_store = update_embeddings(document_store)
         return document_store
     else:

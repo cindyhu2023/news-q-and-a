@@ -7,6 +7,7 @@ from openai import OpenAI
 from config import long_prompt_template, short_prompt_template, default_prompt_template, temperature_prompt_template, questions
 from utils import remove_duplicate_references
 
+#### set up document store, retriever, and OpenAI client ####
 load_dotenv()
 
 url = os.getenv("OPENSEARCH_URL")
@@ -27,10 +28,17 @@ retriever = EmbeddingRetriever(
 client = OpenAI(
         api_key=os.getenv("OPEN_AI_KEY")
     )
+##############################################################
+
 def query(user_query, temperature, prompt_template):
+    # get the top 5 most relevant documents
     documents = retriever.retrieve(query=user_query)
+
+    # fill in the prompt template with the documents and user query
     prompt_template_obj = PromptTemplate(prompt=prompt_template)
     filled_prompt = list(prompt_template_obj.fill(documents=documents, query=user_query))[0]
+
+    # query OpenAI's API
     chat_completion = client.chat.completions.create(
         messages=[
             {
@@ -44,6 +52,8 @@ def query(user_query, temperature, prompt_template):
     )
 
     answer = chat_completion.choices[0].message.content
+
+    # create a reference dictionary for the answer
     reference = {}
     for idx, doc in enumerate(documents):
         reference[idx+1] = doc.meta["URL"]
@@ -53,8 +63,7 @@ def query(user_query, temperature, prompt_template):
     return answer, reference
 
 def run():
-    # logging.basicConfig(format="%(levelname)s - %(name)s -  %(message)s", level=logging.DEBUG)
-    # logging.getLogger("haystack").setLevel(logging.INFO)
+    # test group 1 (response length): default, short, long
     responses1 = {}
     templates = [
         {"name": "default", "template": default_prompt_template},
@@ -71,30 +80,31 @@ def run():
                 "reference": reference
             })
         responses1[template["name"]] = res
-    with open("sample_response_1.5.json", 'w') as outfile:
+    with open("sample_response_1.json", 'w') as outfile:
           json.dump(responses1, outfile)
     print("Done writing sample_response_1.json")
 
-    # responses2 = {}
-    # temps = [
-    #     {"name": "temperature_0.5", "temperature": 0.5},
-    #     {"name": "temperature_0.9", "temperature": 0.9},
-    #     {"name": "temperature_0.1", "temperature": 0.1}
-    # ]
-    # for temp in temps:
-    #     print("temp: ", temp["name"])
-    #     res = []
-    #     for question in questions:
-    #         print("question: ", question)
-    #         answer, reference = query(question, temp["temperature"], temperature_prompt_template)
-    #         res.append({
-    #             "question": question,
-    #             "answer": answer,
-    #             "reference": reference
-    #         })
-    #     responses2[temp["name"]] = res
-    # with open("sample_response_6.json", 'w') as outfile:
-    #       json.dump(responses2, outfile)
+    # test group 2 (creativity/randomness): temperature 0.5, 0.9, 0.1
+    responses2 = {}
+    temps = [
+        {"name": "temperature_0.5", "temperature": 0.5},
+        {"name": "temperature_0.9", "temperature": 0.9},
+        {"name": "temperature_0.1", "temperature": 0.1}
+    ]
+    for temp in temps:
+        print("temp: ", temp["name"])
+        res = []
+        for question in questions:
+            print("question: ", question)
+            answer, reference = query(question, temp["temperature"], temperature_prompt_template)
+            res.append({
+                "question": question,
+                "answer": answer,
+                "reference": reference
+            })
+        responses2[temp["name"]] = res
+    with open("sample_response_2.json", 'w') as outfile:
+          json.dump(responses2, outfile)
 
     return
 

@@ -1,11 +1,9 @@
 from flask import Flask, request, jsonify
-from haystack.document_stores import ElasticsearchDocumentStore, OpenSearchDocumentStore
+from haystack.document_stores import OpenSearchDocumentStore
 import logging
-from haystack import Pipeline
-from haystack.nodes import PromptModel, PromptNode, PromptTemplate, AnswerParser, EmbeddingRetriever
+from haystack.nodes import PromptTemplate, EmbeddingRetriever
 import os
 from dotenv import load_dotenv
-from flask_mysqldb import MySQL
 from openai import OpenAI
 
 load_dotenv()
@@ -20,15 +18,12 @@ def home():
 logging.basicConfig(format="%(levelname)s - %(name)s -  %(message)s", level=logging.INFO)
 logging.getLogger("haystack").setLevel(logging.INFO)
 
-# document_store = ElasticsearchDocumentStore(host="localhost")
 
 ################## MYSQL LOGGING ##################
 app.config['MYSQL_HOST'] = os.getenv("RDS_ENDPOINT")
 app.config['MYSQL_USER'] = os.getenv("USER_NAME")
 app.config['MYSQL_PASSWORD'] = os.getenv("USER_PWD")
 app.config['MYSQL_DB'] = os.getenv("DB_NAME")
-
-mysql = MySQL(app)
 
 ################## OPEN SEARCH ##################
 url = os.getenv("OPENSEARCH_URL")
@@ -45,44 +40,6 @@ retriever = EmbeddingRetriever(
     model_format="sentence_transformers",
     top_k=5
 )
-
-def query(user_query, retriever):
-    client = OpenAI(
-        api_key=os.getenv("OPEN_AI_KEY")
-    )
-    prompt_template = '''
-        Create a concise and informative answer (no more than 50 words) for a given question 
-        based solely on the given documents. You must only use information from the given documents. 
-        Cite the documents using numeric references in the text. 
-        If multiple documents contain the answer, cite those documents like [1,2] at the end of the sentence in the answer. 
-        If the documents do not contain the answer to the question, say that 'answering is not possible given the available information.'
-
-        {join(documents, delimiter=new_line, pattern=new_line+'Document[$idx]: $content', str_replace={new_line: ' ', '[': '(', ']': ')'})}
-
-        Question: {query}; Answer:
-    '''
-
-    documents = retriever.retrieve(query=user_query)
-    prompt_template_obj = PromptTemplate(prompt=prompt_template)
-    filled_prompt = list(prompt_template_obj.fill(documents=documents, query=user_query))[0]
-    chat_completion = client.chat.completions.create(
-        messages=[
-            {
-                "role": "user",
-                "content": filled_prompt,
-            }
-        ],
-        model="gpt-3.5-turbo",
-        max_tokens=1024,
-    )
-
-    answer = chat_completion.choices[0].message.content
-    reference = {}
-    for idx, doc in enumerate(documents):
-        reference[idx+1] = doc.meta["URL"]
-    answer, reference = remove_duplicate_references(answer, reference)
-
-    return answer, reference
 
 @app.route('/question', methods=['POST'])
 def ask_question():
@@ -108,6 +65,55 @@ def ask_question():
 
 ####### util functions #######
 
+def query(user_query, retriever):
+    # get the top 5 most relevant documents
+    documents = retriever.retrieve(query=user_query)
+    
+    client = OpenAI(
+        api_key=os.getenv("OPEN_AI_KEY")
+    )
+
+    # prompt template from PromptHub https://prompthub.deepset.ai/
+    prompt_template = '''
+        Create a concise and informative answer (no more than 50 words) for a given question 
+        based solely on the given documents. You must only use information from the given documents. 
+        Cite the documents using numeric references in the text. 
+        If multiple documents contain the answer, cite those documents like [1,2] at the end of the sentence in the answer. 
+        If the documents do not contain the answer to the question, say that 'answering is not possible given the available information.'
+
+        {join(documents, delimiter=new_line, pattern=new_line+'Document[$idx]: $content', str_replace={new_line: ' ', '[': '(', ']': ')'})}
+
+        Question: {query}; Answer:
+    '''
+    prompt_template_obj = PromptTemplate(prompt=prompt_template)
+
+    # fill in the prompt template with the documents and user query
+    filled_prompt = list(prompt_template_obj.fill(documents=documents, query=user_query))[0] 
+
+    # query OpenAI's API
+    chat_completion = client.chat.completions.create(
+        messages=[
+            {
+                "role": "user",
+                "content": filled_prompt,
+            }
+        ],
+        model="gpt-3.5-turbo",
+        max_tokens=1024,
+    )
+
+    answer = chat_completion.choices[0].message.content
+
+    # create a reference dictionary for the answer
+    reference = {}
+    for idx, doc in enumerate(documents):
+        reference[idx+1] = doc.meta["URL"]
+    answer, reference = remove_duplicate_references(answer, reference)
+
+    return answer, reference
+
+
+# remove duplicate references and fix the numbering in the answer
 def remove_duplicate_references(answer, references):
     answer = answer.replace("[", "|")
     answer = answer.replace("]", "|")
