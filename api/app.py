@@ -19,12 +19,6 @@ logging.basicConfig(format="%(levelname)s - %(name)s -  %(message)s", level=logg
 logging.getLogger("haystack").setLevel(logging.INFO)
 
 
-################## MYSQL LOGGING ##################
-app.config['MYSQL_HOST'] = os.getenv("RDS_ENDPOINT")
-app.config['MYSQL_USER'] = os.getenv("USER_NAME")
-app.config['MYSQL_PASSWORD'] = os.getenv("USER_PWD")
-app.config['MYSQL_DB'] = os.getenv("DB_NAME")
-
 ################## OPEN SEARCH ##################
 url = os.getenv("OPENSEARCH_URL")
 username =  os.getenv("OPENSEARCH_USERNAME")
