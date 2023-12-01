@@ -1,6 +1,5 @@
 farm-haystack>=1.21.0
 Flask>=3.0.0
-Flask-MySQLdb>=2.0.0
 opensearch-py>=2.3.2
 python-dotenv>=1.0.0
 sentence-transformers>=2.2.2
